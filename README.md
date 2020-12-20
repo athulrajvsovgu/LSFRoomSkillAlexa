@@ -12,32 +12,32 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 <table style="border-collapse: collapse; border: none;">
 	<tr style="border: none;">
 		<td style="border: none;"> 
-			<figure align="center">
-				<img src="./img/1-off._TTH_.png" width="128">
+			<figure>
+				<img src="./img/1-off._TTH_.png" width="124">
 				<figcaption align="center"><a href="./docs/room_search_date.md">Find room with date</a></figcaption>
 			</figure>
 			</td>
 			<td> 
-			<figure align="center">
-				<img src="./img/2-off._TTH_.png" width="128">
+			<figure>
+				<img src="./img/2-off._TTH_.png" width="124">
 				<figcaption align="center"><a href="./docs/room_search_immediately.md">Find room immediately</a></figcaption>
 			</figure>
 			</td>
 			<td> 
-			<figure align="center">
-				<img src="./img/3-off._TTH_.png" width="128">
+			<figure>
+				<img src="./img/3-off._TTH_.png" width="124">
 				<figcaption align="center"><a href="./docs/reserve_room.md">Reserve room</a></figcaption>
 			</figure>
 			</td>
 			<td> 
-			<figure align="center">
-				<img src="./img/4-off._TTH_.png" width="128">
+			<figure>
+				<img src="./img/4-off._TTH_.png" width="124">
 				<figcaption align="center"><a href="./docs/cancel_reservation.md">Cancel reservation</a></figcaption>
 			</figure>
 			</td>
 			<td> 
-			<figure align="center">
-				<img src="./img/5-off._TTH_.png" width="128">
+			<figure>
+				<img src="./img/5-off._TTH_.png" width="124">
 				<figcaption align="center"><a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">LSF Portal</a></figcaption>
 			</figure>
 		</td>
