@@ -9,36 +9,36 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
-<table>
-	<tr>
-		<td> 
+<table style="border-collapse: collapse; border: none;">
+	<tr style="border: none;">
+		<td style="border: none;"> 
 			<figure>
-				<img src="./img/1-off._TTH_.png">
-				<figcaption><a href="./docs/room_search_date.md">Find room with date</a></figcaption>
+				<img src="./img/1-off._TTH_.png" width="148">
+				<figcaption align="center"><a href="./docs/room_search_date.md">Find room with date</a></figcaption>
 			</figure>
 		</td>
 		<td> 
 			<figure>
-				<img src="./img/2-off._TTH_.png">
-				<figcaption><a href="./docs/room_search_immediately.md">Find room immediately</a></figcaption>
+				<img src="./img/2-off._TTH_.png" width="148">
+				<figcaption align="center"><a href="./docs/room_search_immediately.md">Find room immediately</a></figcaption>
 			</figure>
 		</td>
 		<td> 
 			<figure>
-				<img src="./img/3-off._TTH_.png">
-				<figcaption><a href="./docs/reserve_room.md">Reserve room</a></figcaption>
+				<img src="./img/3-off._TTH_.png" width="148">
+				<figcaption align="center"><a href="./docs/reserve_room.md">Reserve room</a></figcaption>
 			</figure>
 		</td>
 		<td> 
 			<figure>
-				<img src="./img/4-off._TTH_.png">
-				<figcaption><a href="./docs/cancel_reservation.md">Cancel reservation</a></figcaption>
+				<img src="./img/4-off._TTH_.png" width="148">
+				<figcaption align="center"><a href="./docs/cancel_reservation.md">Cancel reservation</a></figcaption>
 			</figure>
 		</td>
 		<td> 
 			<figure>
-				<img src="./img/5-off._TTH_.png">
-				<figcaption><a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">LSF Portal</a></figcaption>
+				<img src="./img/5-off._TTH_.png" width="148">
+				<figcaption align="center"><a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">LSF Portal</a></figcaption>
 			</figure>
 		</td>
 	</tr>
