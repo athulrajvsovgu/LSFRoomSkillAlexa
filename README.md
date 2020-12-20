@@ -9,7 +9,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
-<table border="0" cellspacing="0" cellpadding="0" height="350px" width="838px">
+<table border="0" cellspacing="0" cellpadding="0" height="350px" width="100%">
 	<tr border="0" cellspacing="0" cellpadding="0">
 		<td border="0" cellspacing="0" cellpadding="0"> 
 		  <p align="center">
@@ -46,7 +46,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 			<em><a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">LSF Portal</a></em>
 		  </p> 
 		</td>
-	</trborder=>
+	</tr>
 </table>
 
 ## Working
