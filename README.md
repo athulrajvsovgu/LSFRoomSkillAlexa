@@ -9,31 +9,63 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
+<style type="text/css">
+        .fans li{
+            display: inline;
+        }
+        .fans .captioned-image {
+            display:inline-block;
+            width:200px;
+        }
+
+        .fans figure {
+            width: 200px;
+            display:block;
+            text-align:center;
+        }
+
+        img {
+            max-width:200px;
+        }
+</style>
 <p>
-	<a href="./docs/room_search_date.md">
-		<img src="./img/1-off._TTH_.png" alt="Find room with date" data-canonical-src="./img/1-off._TTH_.png" style="max-width:100%;">
-		  <br>
-			<em>Find room with date</em>
-	</a>
-	<a href="./docs/room_search_immediately.md">
-		<img src="./img/2-off._TTH_.png" alt="Find room immediately" data-canonical-src="./img/2-off._TTH_.png" style="max-width:100%;">
-		<br>
-			<em>Find room immediately</em>
-	</a>
-	<a href="./docs/reserve_room.md">
-		<img src="./img/3-off._TTH_.png" alt="Reserve Room" data-canonical-src="./img/3-off._TTH_.png" style="max-width:100%;">
-		<br>
-			<em>Reserve Room</em>	
-	</a>
-	<a href="./docs/cancel_reservation.md">
-		<img src="./img/4-off._TTH_.png" alt="Cancel reservation" data-canonical-src="./img/4-off._TTH_.png" style="max-width:100%;">
-		<br>
-			<em>Cancel reservation</em>	
-	</a>
-	<a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">
-		<img src="./img/5-off._TTH_.png" alt="LSF Portal" data-canonical-src="./img/5-off._TTH_.png" style="max-width:100%;">
-		<br>
-			<em>LSF Portal</em>
+	<div class="intends">
+		<div class="captioned-image">
+			<a href="./docs/room_search_date.md">
+				<img src="./img/1-off._TTH_.png" alt="Find room with date" data-canonical-src="./img/1-off._TTH_.png" style="max-width:100%;">
+				  <br>
+					<em>Find room with date</em>
+			</a>
+		</div>    
+		<div class="captioned-image">    
+			<a href="./docs/room_search_immediately.md">
+				<img src="./img/2-off._TTH_.png" alt="Find room immediately" data-canonical-src="./img/2-off._TTH_.png" style="max-width:100%;">
+				<br>
+					<em>Find room immediately</em>
+			</a>
+		</div>    
+		<div class="captioned-image">    
+			<a href="./docs/reserve_room.md">
+				<img src="./img/3-off._TTH_.png" alt="Reserve Room" data-canonical-src="./img/3-off._TTH_.png" style="max-width:100%;">
+				<br>
+					<em>Reserve Room</em>	
+			</a>
+		</div>    
+		<div class="captioned-image">    
+			<a href="./docs/cancel_reservation.md">
+				<img src="./img/4-off._TTH_.png" alt="Cancel reservation" data-canonical-src="./img/4-off._TTH_.png" style="max-width:100%;">
+				<br>
+					<em>Cancel reservation</em>	
+			</a>
+		</div>      
+		<div class="captioned-image">    
+			<a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">
+				<img src="./img/5-off._TTH_.png" alt="LSF Portal" data-canonical-src="./img/5-off._TTH_.png" style="max-width:100%;">
+				<br>
+					<em>LSF Portal</em>
+			</a>
+		</div>
+	</div>
 </p>
 
 ## Working
