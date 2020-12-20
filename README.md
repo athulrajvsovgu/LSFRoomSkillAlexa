@@ -9,40 +9,8 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
-<table style="border-collapse: collapse; border: none;">
-	<tr style="border: none;">
-		<td style="border: none;"> 
-			<figure>
-				<img src="./img/1-off._TTH_.png" align="center" width="124">
-				<figcaption align="center"><a href="./docs/room_search_date.md" style="font-size:12px">Find room with date</a></figcaption>
-			</figure>
-			</td>
-			<td> 
-			<figure>
-				<img src="./img/2-off._TTH_.png" align="center" width="124">
-				<figcaption align="center"><a href="./docs/room_search_immediately.md" style="font-size:12px">Find room immediately</a></figcaption>
-			</figure>
-			</td>
-			<td> 
-			<figure>
-				<img src="./img/3-off._TTH_.png" align="center" width="124">
-				<figcaption align="center"><a href="./docs/reserve_room.md" style="font-size:12px">Reserve room</a></figcaption>
-			</figure>
-			</td>
-			<td> 
-			<figure>
-				<img src="./img/4-off._TTH_.png" align="center" width="124">
-				<figcaption align="center"><a href="./docs/cancel_reservation.md" style="font-size:12px">Cancel reservation</a></figcaption>
-			</figure>
-			</td>
-			<td> 
-			<figure>
-				<img src="./img/5-off._TTH_.png" align="center" width="124">
-				<figcaption align="center"><a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=" style="font-size:12px">LSF Portal</a></figcaption>
-			</figure>
-		</td>
-	</tr>
-</table>
+[![Find room with date](./img/1-off._TTH_.png)](./instructions/1-voice-user-interface.md) | [![Find room immediately](./img/2-off._TTH_.png)](./instructions/2-lambda-function.md) | [![Reserve room](./img/3-off._TTH_.png)](./instructions/3-connect-vui-to-code.md) | [![Cancel reservation](./img/4-off._TTH_.png)](./instructions/4-testing.md) | [![LSF Portal](./img/5-off._TTH_.png)](./instructions/5-customization.md)
+* Find room with date * | * Find room immediately * | * Reserve room * | * Cancel reservation * | * LSF Portal *
 
 ## Working
 
