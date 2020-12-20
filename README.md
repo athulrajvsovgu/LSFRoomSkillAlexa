@@ -9,7 +9,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
-<table border="0" cellspacing="0" cellpadding="0" height="350px" width="100%">
+<table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
 	<tr border="0" cellspacing="0" cellpadding="0">
 		<td border="0" cellspacing="0" cellpadding="0"> 
 		  <p align="center">
