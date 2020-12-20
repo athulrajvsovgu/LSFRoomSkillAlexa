@@ -49,6 +49,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 	</tr>
 </table>
 
+
 ## Working with the skill
 
 To invoke the skill say "open LSF Room Service". This launches the skill and looks for various utterances to launch various intents mentioned above.
@@ -60,7 +61,9 @@ To invoke the skill say "open LSF Room Service". This launches the skill and loo
 
 ### Usage
 
-#### * Request
+The below sample gives an idea about the sample requests and responses.
+
+##### Request
 
 ```text
 Alexa, open lsf room service
@@ -79,7 +82,7 @@ yes
 ...
 ```
 
-#### * Response
+##### Response
 
 ```text
 We have found .... rooms for you....
