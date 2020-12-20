@@ -9,29 +9,29 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
-<table border="0" cellspacing="0" cellpadding="0">
-	<tr>
-		<td> 
-		  <p align="center" style="padding: 10px">
+<table border="0" cellspacing="0" cellpadding="0" height="350px" width="838px">
+	<tr border="0" cellspacing="0" cellpadding="0">
+		<td border="0" cellspacing="0" cellpadding="0"> 
+		  <p align="center">
 			<img alt="Find room with date" src="./img/1-off._TTH_.png" width="124">
 			<br>
 			<em><a href="./docs/room_search_date.md">Find room with date</a></em>
 		  </p> 
 		</td>
-		<td> 
+		<td border="0" cellspacing="0" cellpadding="0"> 
 		  <p align="center">
 			<img alt="Find room immediately" src="./img/2-off._TTH_.png" width="124">
 			<br>
 			<em><a href="./docs/room_search_immediately.md">Find room immediately</a></em>
 		  </p> 
 		</td>
-		<td> 
-		  <p align="center" style="padding: 10px">
+		<td border="0" cellspacing="0" cellpadding="0"> 
+		  <p align="center">
 			<img alt="Reserve room" src="./img/3-off._TTH_.png" width="124">
 			<br>
 			<em><a href="./docs/reserve_room.md">Reserve room</a></em>
 		  </p> 
-		</td>
+		</td border="0" cellspacing="0" cellpadding="0">
 		<td> 
 		  <p align="center">
 			<img alt="Cancel reservation" src="./img/4-off._TTH_.png" width="124">
@@ -39,14 +39,14 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 			<em><a href="./docs/cancel_reservation.md">Cancel reservation</a></em>
 		  </p> 
 		</td>
-		<td> 
+		<td border="0" cellspacing="0" cellpadding="0"> 
 		  <p align="center">
 			<img alt="LSF Portal" src="./img/5-off._TTH_.png" width="124">
 			<br>
 			<em><a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">LSF Portal</a></em>
 		  </p> 
 		</td>
-	</tr>
+	</trborder=>
 </table>
 
 ## Working
