@@ -9,7 +9,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
-[![Find room with date](./img/1-off._TTH_.png)](./docs/room_search_date.md)*Find room with date*[![Find room immediately](./img/2-off._TTH_.png)](./docs/room_search_immediately.md)*Find room immediately*[![Reserve Room](./img/3-off._TTH_.png)](./docs/reserve_room.md)*Reserve Room*[![Cancel reservation](./img/4-off._TTH_.png)](./docs/cancel_reservation.md)*Cancel reservation*[![LSF Portal](./img/5-off._TTH_.png)](https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=)*LSF Portal*
+|[![Find room with date](./img/1-off._TTH_.png)](./docs/room_search_date.md)||:--:||*Find room with date*||[![Find room immediately](./img/2-off._TTH_.png)](./docs/room_search_immediately.md)||:--:||*Find room immediately*||[![Reserve Room](./img/3-off._TTH_.png)](./docs/reserve_room.md)||:--:||*Reserve Room*||[![Cancel reservation](./img/4-off._TTH_.png)](./docs/cancel_reservation.md)||:--:||*Cancel reservation*||[![LSF Portal](./img/5-off._TTH_.png)](https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=)||:--:||*LSF Portal*|
 
 
 
