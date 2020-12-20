@@ -1,0 +1,26 @@
+{
+    "en": {
+            "WELCOME_MSG": "Hello! Welcome to LSF Room Service. What can I do for you?",
+            "WELCOME_REPROMPT_MSG": "You can say for example, find a free room in building twenty two.",
+            "WELCOME_BACK_MSG": "Welcome back. You have a reservation for the room {} from {} till {}.",
+            "HELP_MSG": "You can tell me find a free room in building 22 or find a free room for today, and I will ask further questions about the room and find suitable rooms for you in the end.",
+            "GOODBYE_MSG": "Goodbye!",
+            "REFLECTOR_MSG": "You just triggered {}",
+            "ERROR_MSG": "Sorry, I couldn't understand what you said. Can you reformulate?",
+            "ERROR_TIMEZONE_MSG": "I can't determine your timezone. Please check your device settings and make sure a timezone was selected. After that please reopen the skill and try again!",
+            "RESULT_MSG" : "I have found {} room for you. It is: ",
+            "RESULTS_MSG" : "I have found {} rooms for you. They are: ",
+            "NO_RESULT_MSG" : "Sorry, I couldn't find any rooms.",
+            "RESERVE_MSG" : "Do you want to reserve any rooms?",
+            "YES_RESERVED_MSG": "Ok. I have reserved the room {} for the specified amount of time.",
+            "NO_RESERVED_MSG": "Sorry. I could not reserve a room for you.",
+            "TEST_MSG": "Here are the results. You can reserve a room if needed.",
+            "RESERVE_PROMPT_MSG": "To reserve a room you can say for example, reserve a room in building twenty nine for two hours.",
+            "TRY_AGAIN": "Do you want to try again?",
+            "INVALID_OPTION": "Invalid option entry. There are only {} records. You need to enter a value less than or equal to the number of records.",
+            "USER_CANNOT_BOOK": "But you cannot resever a room. A reservation already exist in your name which expires only by {}.",
+            "NO_RESERVATION": "Sorry, you donot have any reservations.",
+            "CANCEL_RESERVATION": "Your reservation has been cancelled.",
+            "ERROR_RESERVATION_CANCEL": "Your reservation has been cancelled."
+    }
+}
