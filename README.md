@@ -1,11 +1,11 @@
 # Alexa LSF Room Management Skill using ASK Python SDK
 
-This Alexa skill is to manage rooms through the [LSF Portal](https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=).The skill prompts the user for necessary inputs and provides appropriate results as can be viewed through the image below. This skill has the following capabilities:-
+This Alexa skill is to manage rooms through the [LSF Portal](https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=). The skill prompts the user for necessary inputs and provides appropriate results as can be viewed through the image below. This skill has the following capabilities:-
 * Search and reserve a room on specified date and time
 * Search and reserve a room immediately
 * Cancel reservations
 
-The LSF Room Reservation portal looks as below. Options below gives detailed documentation on the various intends.
+The LSF Room Reservation portal looks as below. Options below gives detailed documentation on the various intents.
 
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
@@ -49,9 +49,9 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 	</tr>
 </table>
 
-## Working
+## Working with the skill
 
-To invoke the skill say "oopen LSF Room Service". This launches the skill and looks for various utterances to launch various intents mentioned above.
+To invoke the skill say "open LSF Room Service". This launches the skill and looks for various utterances to launch various intents mentioned above.
 * For eg. say "find a free room in building twenty nine". 
 * Then it will prompt to collect all the mandatory slot values.
 * It retrieves the slot values and uses it to compute the results.
@@ -60,7 +60,7 @@ To invoke the skill say "oopen LSF Room Service". This launches the skill and lo
 
 ### Usage
 
-#### Request
+#### * Request
 
 ```text
 Alexa, open lsf room service
@@ -79,7 +79,7 @@ yes
 ...
 ```
 
-#### Response
+#### * Response
 
 ```text
 We have found .... rooms for you....
