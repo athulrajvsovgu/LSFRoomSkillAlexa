@@ -20,7 +20,7 @@
           "samples": []
         },
         {
-          "name": "SearchRoomWithDetailsIntent",
+          "name": "FindRoomWithDate",
           "slots": [
             {
               "name": "buildingNumber",
@@ -45,8 +45,9 @@
               "name": "time",
               "type": "AMAZON.TIME",
               "samples": [
+                "at {time}",
                 "{time}",
-                "I want the room a {time}",
+                "I want the room at {time}",
                 "I want the room {time}"
               ]
             },
@@ -100,7 +101,7 @@
           ]
         },
         {
-          "name": "SearchRoomNowIntent",
+          "name": "FindRoomImmediately",
           "slots": [
             {
               "name": "buildingNumber",
@@ -161,7 +162,7 @@
           ]
         },
         {
-          "name": "ReserveRoomIntent",
+          "name": "ReserveRoom",
           "slots": [
             {
               "name": "roomOption",
@@ -172,17 +173,15 @@
               ]
             },
             {
-              "name": "reserveRoom",
+              "name": "roomReserve",
               "type": "YES_NO_SLOT",
               "samples": [
-                "{reserveRoom}"
+                "{roomReserve}"
               ]
             }
           ],
           "samples": [
-            "the option {roomOption}",
-            "select option {roomOption}",
-            "option {roomOption}"
+            "intent chaining"
           ]
         },
         {
@@ -207,8 +206,6 @@
           "samples": [
             "I want to cancel my reservation",
             "I would like to cancel my reservation",
-            "I would like to undo my reservation",
-            "I want to undo my reservation",
             "I want to drop my reservation",
             "I would like to delete my reservation",
             "I would like to remove my reservation",
@@ -1725,7 +1722,7 @@
     "dialog": {
       "intents": [
         {
-          "name": "SearchRoomWithDetailsIntent",
+          "name": "FindRoomWithDate",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -1919,7 +1916,7 @@
           ]
         },
         {
-          "name": "SearchRoomNowIntent",
+          "name": "FindRoomImmediately",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -2079,7 +2076,7 @@
           ]
         },
         {
-          "name": "ReserveRoomIntent",
+          "name": "ReserveRoom",
           "confirmationRequired": false,
           "prompts": {},
           "slots": [
@@ -2099,7 +2096,7 @@
               ]
             },
             {
-              "name": "reserveRoom",
+              "name": "roomReserve",
               "type": "YES_NO_SLOT",
               "elicitationRequired": true,
               "confirmationRequired": false,
@@ -2272,7 +2269,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "For how many hours do you want the room ?"
+            "value": "For how many hours do you want the room?"
           }
         ]
       },
@@ -2764,5 +2761,5 @@
       }
     ]
   },
-  "version": "320"
+  "version": "327"
 }

@@ -21,6 +21,6 @@
             "USER_CANNOT_BOOK": "But you cannot resever a room. A reservation already exist in your name which expires only by {}.",
             "NO_RESERVATION": "Sorry, you donot have any reservations.",
             "CANCEL_RESERVATION": "Your reservation has been cancelled.",
-            "ERROR_RESERVATION_CANCEL": "Your reservation has been cancelled."
+            "ERROR_RESERVATION_CANCEL": "There was an error while cancelling your reservation."
     }
 }

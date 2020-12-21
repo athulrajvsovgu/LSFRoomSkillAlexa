@@ -20,4 +20,4 @@ INVALID_OPTION = _("Invalid option entry. There are only {} records. You need to
 USER_CANNOT_BOOK = _("But you cannot resever a room. A reservation already exist in your name which expires only by {}.")
 CANCEL_RESERVATION = _("Your reservation has been cancelled.")
 NO_RESERVATION = _("Sorry, you donot have any reservations.")
-ERROR_RESERVATION_CANCEL = _("Your reservation has been cancelled.")
+ERROR_RESERVATION_CANCEL = _("There was an error while cancelling your reservation.")

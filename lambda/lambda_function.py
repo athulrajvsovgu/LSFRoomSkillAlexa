@@ -68,7 +68,7 @@ class RoomSearchIntentHandler(AbstractRequestHandler):
     Handler for Searching Room
     """
     def can_handle(self, handler_input):
-        return is_intent_name("SearchRoomWithDetailsIntent")(handler_input)
+        return is_intent_name("FindRoomWithDate")(handler_input)
 
     def handle(self, handler_input):
         data = handler_input.attributes_manager.request_attributes["_"]
@@ -118,7 +118,7 @@ class RoomSearchNowIntentHandler(AbstractRequestHandler):
         return date_converted
 
     def can_handle(self, handler_input):
-        return is_intent_name("SearchRoomNowIntent")(handler_input)
+        return is_intent_name("FindRoomImmediately")(handler_input)
         
     def handle(self, handler_input):
         data = handler_input.attributes_manager.request_attributes["_"]
@@ -159,7 +159,7 @@ class ReserveRoomIntentHandler(AbstractRequestHandler):
     Handler for Searching Room
     """
     def can_handle(self, handler_input):
-        return is_intent_name("ReserveRoomIntent")(handler_input)
+        return is_intent_name("ReserveRoom")(handler_input)
     
     def handle(self, handler_input):
         data = handler_input.attributes_manager.request_attributes["_"]
@@ -169,7 +169,7 @@ class ReserveRoomIntentHandler(AbstractRequestHandler):
         # if the interaction models uses synonyms the following logic will return the ID for the value
         try:
             room_option = slots["roomOption"].resolutions.resolutions_per_authority[0].values[0].value.id
-            reserve_room = slots["reserveRoom"].resolutions.resolutions_per_authority[0].values[0].value.id
+            reserve_room = slots["roomReserve"].resolutions.resolutions_per_authority[0].values[0].value.id
         except:
         # if the above fails, it means that there are no synonyms being used, so retrieve the value for the month in the regular way
             pass
