@@ -108,9 +108,9 @@ class RoomSearchNowIntentHandler(AbstractRequestHandler):
     #round off time to nearest hour
     def round_time(self, time_now):
         if time_now.minute >= 1:
-            return time_now.replace(second=0, microsecond=0, minute=0, hour=time_now.hour+1)
+            return time_now.replace(second=0, microsecond=0, minute=0, hour=time_now.hour+2)
         else:
-            return time_now.replace(second=0, microsecond=0, minute=0)
+            return time_now.replace(second=0, microsecond=0, minute=0, hour=time_now.hour+1)
 
     def date_format_convert(self, data):
         date_converted = data.strftime("%Y-%m-%d %H:%M:%S.%f")
@@ -148,7 +148,7 @@ class RoomSearchNowIntentHandler(AbstractRequestHandler):
         time = self.round_time(date)
         date = datetime.strftime(date,'%Y-%m-%d')
         time = datetime.strftime(time,'%H:%M')
-
+        
         commons = SearchIntent()   
         speech = commons.search_execution(handler_input, data, user_id, date, time, building, duration, seats, movable_seats, projector, chalkboard)
         return handler_input.response_builder.speak(speech).response 
@@ -228,7 +228,7 @@ class YesHandler(AbstractRequestHandler):
         if session_attr["intent"] == "SearchIntent":
             handler_input.response_builder.set_should_end_session(False)
             return handler_input.response_builder.add_directive(
-                DelegateDirective(updated_intent="ReserveRoomIntent")).response
+                DelegateDirective(updated_intent="ReserveRoom")).response
         else:
             speak_output = data["GOODBYE_MSG"]
             handler_input.response_builder.speak(speak_output)

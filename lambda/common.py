@@ -97,12 +97,12 @@ class SearchIntent:
                     ask_reserve = data['RESERVE_MSG']
                     speech = speech + "." + "\n" + ask_reserve
                     handler_input.response_builder.set_should_end_session(False)
-                elif check_user_existence == 'error':
-                    speech = data['ERROR_MSG']
                 else:
                     check_user_expiry = (self.db).return_user_info(user_id)
+                    logger.info('check_user_expiry')
+                    logger.info(check_user_expiry)
                     say_reserve = data['USER_CANNOT_BOOK'].format(check_user_expiry['expire_at'])
-                    speech = speech + "." + "\n" + say_reserve + ' ' + data[GOODBYE_MSG]
+                    speech = speech + "." + "\n" + say_reserve + ' ' + data['GOODBYE_MSG']
                     handler_input.response_builder.set_should_end_session(True)                    
         except:
             speech = data['NO_RESULT_MSG']

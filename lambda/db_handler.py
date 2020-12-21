@@ -22,7 +22,7 @@ class ReserveRooms:
             self.client.close()    
             return flag
         except:
-            return 'error'
+            return False
         
     def return_user_info(self, user):
         return_user = 'empty'
@@ -76,15 +76,11 @@ class ReserveRooms:
                                                 'expire_at': rooms['expire_at'][i]}, ignore_index=True)
     
             self.client.close()
-            return final_result
         except:
-            return 'error'
+            pass
+        return final_result
 
     def insert_data(self, records):
-        try:
             self.collection.create_index("expire_at", expireAfterSeconds=0)
             self.collection.insert_one(records)
             self.client.close()
-            return True
-        except:
-            return False
