@@ -41,8 +41,8 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 		</td>
 		<td> 
 		  <p align="center">
-            <a href="./docs/reserve_room.md">
-                <img alt="Cancel reservation" src="./img/4-off._TTH_.png" href="./docs/cancel_reservation.md" width="124">
+            <a href="./docs/cancel_reservation.md">
+                <img alt="Cancel reservation" src="./img/4-off._TTH_.png" width="124">
                 <br>
                 <em>Cancel reservation</em>
             </a>
