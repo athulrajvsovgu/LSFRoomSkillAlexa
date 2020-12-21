@@ -50,10 +50,10 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 		</td>
 		<td> 
 		  <p align="center">
-            <a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">          
+            <a href="./docs/">          
                 <img alt="LSF Portal" src="./img/5-off._TTH_.png" width="124">
                 <br>
-                <em>LSF Portal</em>
+                <em>Full Documentation</em>
             </a>
 		  </p> 
 		</td>
