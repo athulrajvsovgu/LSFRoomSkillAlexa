@@ -1,6 +1,6 @@
 # Alexa LSF Room Management Skill using ASK Python SDK
 
-This Alexa skill is to manage rooms through the **[LSF Portal]**(https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=). The skill prompts the user for necessary inputs and provides appropriate results as can be viewed through the image below. This skill has the following capabilities:-
+This Alexa skill is to manage rooms through the [**LSF Portal**](https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=). The skill prompts the user for necessary inputs and provides appropriate results as can be viewed through the image below. This skill has the following capabilities:-
 * Search and reserve a room on specified date and time
 * Search and reserve a room immediately
 * Cancel reservations
@@ -53,8 +53,8 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 ## Working with the skill
 
-To invoke the skill say "open LSF Room Service". This launches the skill and looks for various utterances to launch various intents mentioned above.
-* For eg. say "find a free room in building twenty nine". 
+To invoke the skill say *"open LSF Room Service"*. This launches the skill and looks for various utterances to launch various intents mentioned above.
+* For eg. say *"find a free room in building twenty nine"*. 
 * Then it will prompt to collect all the mandatory slot values.
 * It retrieves the slot values and uses it to compute the results.
 * It also prompts the user to for valid input entry in case of invalid entry. For eg. for a number slot type if a string is entered it prompts the user until a number is entered.
@@ -96,16 +96,16 @@ We have found .... rooms for you....
 
 ### Community
 
-* **[Amazon Developer Forums]**(https://forums.developer.amazon.com/spaces/165/index.html) - Join the conversation!
-* **[Hackster.io]**(https://www.hackster.io/amazon-alexa) - See what others are building with Alexa.
+* [**Amazon Developer Forums**](https://forums.developer.amazon.com/spaces/165/index.html) - Join the conversation!
+* [**Hackster.io**](https://www.hackster.io/amazon-alexa) - See what others are building with Alexa.
 
 ### Tutorials & Guides
 
-* **[Voice Design Guide]**(https://developer.amazon.com/designing-for-voice/) - A great resource for learning conversational and voice user interface design.
-* **[CodeAcademy: Learn Alexa]**(https://www.codecademy.com/learn/learn-alexa) - Learn how to build an Alexa Skill from within your browser with this beginner friendly tutorial on CodeAcademy!
+* [**Voice Design Guide**](https://developer.amazon.com/designing-for-voice/) - A great resource for learning conversational and voice user interface design.
+* [**CodeAcademy: Learn Alexa**](https://www.codecademy.com/learn/learn-alexa) - Learn how to build an Alexa Skill from within your browser with this beginner friendly tutorial on CodeAcademy!
 
 ### Documentation
 
-*  **[Official Alexa Skills Kit Python SDK]**(https://pypi.org/project/ask-sdk/)
-*  **[Official Alexa Skills Kit Python SDK Docs]**(https://alexa-skills-kit-python-sdk.readthedocs.io/en/latest/)
-*  **[Official Alexa Skills Kit Documentation]**(https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html)
+*  [**Official Alexa Skills Kit Python SDK**](https://pypi.org/project/ask-sdk/)
+*  [**Official Alexa Skills Kit Python SDK Docs**](https://alexa-skills-kit-python-sdk.readthedocs.io/en/latest/)
+*  [**Official Alexa Skills Kit Documentation**](https://developer.amazon.com/docs/ask-overviews/build-skills-with-the-alexa-skills-kit.html)
