@@ -41,7 +41,7 @@ Ok. I have reserved .... room for you....
 ## Slot details
 The following table gives detailed description of various slots used in this particular Intent.
 
-**Note:** Two custom slots **YES_NO_SLOT**, **CUSTOM_NUMBER** has been used in this skill:-
+**Note:** Two custom slots ***YES_NO_SLOT***, ***CUSTOM_NUMBER*** has been used in this skill:-
 * *The YES_NO_SLOT accepts the synonyms of 'Yes' and 'No' as inputs and produces boolean output*
 * *The CUSTOM_NUMBER defines a slot that not only accepts numbers but also ordinal format*
 * *To get more idea on various slot type please refer the documentation - [**Slot Type Reference**](https://developer.amazon.com/en-US/docs/alexa/custom-skills/slot-type-reference.html)*

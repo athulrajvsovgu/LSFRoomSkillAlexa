@@ -66,7 +66,7 @@ To invoke the skill say ***"open LSF Room Service"***. This launches the skill a
 
 The below sample gives an idea about the sample requests and responses.
 
-##### Sample Request
+#### Sample Request
 
 ```text
 Alexa, open lsf room service
@@ -85,7 +85,7 @@ yes
 ...
 ```
 
-##### Sample Response
+#### Sample Response
 
 ```text
 We have found .... rooms for you....

@@ -56,9 +56,8 @@ We have found .... rooms for you....
 ## Slot details
 The following table gives detailed description of various slots used in this particular Intent.
 
-**Note:** A custom slot **YES_NO_SLOT** has been used in this skill:-
-* *Accepts the synonyms of 'Yes' and 'No' as inputs*
-* *Produces boolean output*
+**Note:** A custom slot ***YES_NO_SLOT*** has been used in this skill:-
+* *Accepts the synonyms of 'Yes' and 'No' as inputs produces boolean output*
 * *To get more idea on various slot type please refer the documentation - [**Slot Type Reference**](https://developer.amazon.com/en-US/docs/alexa/custom-skills/slot-type-reference.html)*
 
 <div class="table-wrap">
