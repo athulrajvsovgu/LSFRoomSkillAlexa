@@ -8,6 +8,12 @@ This Alexa skill is to manage rooms through the [**LSF Portal**](https://lsf.ovg
 
 The LSF Room Reservation portal looks as below. Options below gives detailed documentation on the various intents.
 
+<p align="centre">
+	<a href="./docs/skill_configuration.md">
+		<img src="./img/AlexaConfigTwo.png">
+	</a>
+</p>
+
 <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
 
 <table align="center" width="100%">
