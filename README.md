@@ -10,11 +10,13 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 <p align="centre">
 	<a href="./docs/skill_configuration.md">
-		<img src="./img/AlexaConfigTwo.png">
+		<img src="./img/AlexaConfigOne.png">
 	</a>
 </p>
 
-<img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
+<a href="https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi=">
+    <img src="https://github.com/athulrajvsovgu/LSFRoomSkillAlexa/blob/dev/img/LSF%20Reservation%20Portal.jpg" />
+</a>   
 
 <table align="center" width="100%">
 	<tr>
@@ -57,7 +59,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 		<td> 
 		  <p align="center">
             <a href="./docs/">          
-                <img alt="LSF Portal" src="./img/5-off._TTH_.png" width="124">
+                <img alt="Full Documentation" src="./img/5-off._TTH_.png" width="124">
                 <br>
                 <em>Full Documentation</em>
             </a>
