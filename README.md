@@ -71,8 +71,8 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 
 ## Working with the skill
 
-To invoke the skill say ***"open LSF Room Service"***. This launches the skill and looks for various utterances to launch various intents mentioned above.
-* For eg. say ***"find a free room in building twenty nine"***. 
+To invoke the skill say '***open LSF Room Service***'. This launches the skill and looks for various utterances to launch various intents mentioned above.
+* For eg. say '***find a free room in building twenty nine***'. 
 * Then it will prompt to collect all the mandatory slot values.
 * It retrieves the slot values and uses it to compute the results.
 * It also prompts the user to for valid input entry in case of invalid entry. For eg. for a number slot type if a string is entered it prompts the user until a number is entered.

@@ -2,11 +2,11 @@
 
 This intent takes neccessary inputs such as building number, date, time etc. from the user which is retrieved through filling various slots. Slots convert the user utterances into data such as numbers and dates. There are various types of slots:-
 
-* Alexa built-in slots
+* **Alexa built-in slots**
 These are slots are that come in built in with Amazon Alexa. eg. [**AMAZON.NUMBER**](https://developer.amazon.com/en-US/docs/alexa/custom-skills/slot-type-reference.html#number), [**AMAZON.DATE**](https://developer.amazon.com/en-US/docs/alexa/custom-skills/slot-type-reference.html#date)
 
-* Alexa custom slots
-These are slots are that are custom defined by the user. eg. **'YES_NO_SLOT'**(explained below).
+* **Alexa custom slots**
+These are slots are that are custom defined by the user. eg. '**YES_NO_SLOT**'(explained below).
 
 After retrieving data from the filled mandatory slot values, it is used to search and find the room details available for reservation, from the LSF Portal. However this is different from the [**FindRoomImmediately Intent**](./room_search_immediately.md) that it looks if a room is available on a user specified date and time.
 
@@ -56,7 +56,7 @@ We have found .... rooms for you....
 ## Slot details
 The following table gives detailed description of various slots used in this particular Intent.
 
-**Note:** A custom slot ***YES_NO_SLOT*** has been used in this skill:-
+**Note:** A custom slot '***YES_NO_SLOT***' has been used in this skill:-
 * *Accepts the synonyms of 'Yes' and 'No' as inputs produces boolean output*
 * *To get more idea on various slot type please refer the documentation - [**Slot Type Reference**](https://developer.amazon.com/en-US/docs/alexa/custom-skills/slot-type-reference.html)*
 

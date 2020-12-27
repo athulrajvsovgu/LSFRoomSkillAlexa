@@ -1,7 +1,7 @@
 # Steps to set up and test the skill
 
 Follow the steps below to set up the skill in your **Alexa Developer Console**:-
-- Traverse to https://developer.amazon.com/alexa/console
+- Traverse to '***https://developer.amazon.com/alexa/console***'
 
 - Login using your ***Amazon account credentials***
 
