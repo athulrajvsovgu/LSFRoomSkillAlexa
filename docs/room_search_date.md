@@ -8,7 +8,7 @@ These are slots are that come in built in with Amazon Alexa. eg. [**AMAZON.NUMBE
 * Alexa custom slots
 These are slots are that are custom defined by the user. eg. **'YES_NO_SLOT'**(explained below).
 
-After retrieving data from the filled mandatory slot values, it is used to search and find the room details available for reservation, from the LSF Portal. However this is different from the [**FindRoomImmediately Intent**](./docs/room_search_immediately.md) that it looks if a room is available on a user specified date and time.
+After retrieving data from the filled mandatory slot values, it is used to search and find the room details available for reservation, from the LSF Portal. However this is different from the [**FindRoomImmediately Intent**](./room_search_immediately.md) that it looks if a room is available on a user specified date and time.
 
 ## Sample utterances
 An utterance is a voice command that invokes a particular intent. The intent then prompts the user to fill all the madatory slots. Mandatory slots are those which should be filled compulsarily which are to be converted to data for computation. 
