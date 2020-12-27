@@ -127,15 +127,3 @@ We have found .... rooms for you....
 
 * [**Amazon Developer Forums**](https://forums.developer.amazon.com/spaces/165/index.html) - Join the conversation!
 * [**Hackster.io**](https://www.hackster.io/amazon-alexa) - See what others are building with Alexa.
-
-<body>
-    <div>Blah blah I have a tooltip</div>
-    <x-tooltip orientation="above" trigger-style="hover" target-selector="_previousSibling">
-        Hello, I am the tooltip. <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/ask-devconsole/measure-page._TTH_.png"/>
-    </x-tooltip>
-</body>
-
-<div>
-    <x-tooltip target-selector="_nextSibling">I am the tooltip!</x-tooltip>
-    <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/ask-devconsole/measure-page._TTH_.png"/>
-</div>
