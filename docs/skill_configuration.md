@@ -15,7 +15,7 @@ Follow the steps below to set up the skill in your Alexa Developer Console:-
 - It has the following important [**tabs**](https://developer.amazon.com/en-US/docs/alexa/devconsole/about-the-developer-console.html)
     - [**Build**](https://developer.amazon.com/en-US/docs/alexa/devconsole/build-your-skill.html)
     - [**Code**](https://developer.amazon.com/en-US/docs/alexa/custom-skills/use-the-alexa-skills-kit-samples.html)
-    - [**Test](https://developer.amazon.com/en-US/docs/alexa/devconsole/test-your-skill.html)
+    - [**Test**](https://developer.amazon.com/en-US/docs/alexa/devconsole/test-your-skill.html)
     - [**Distribution**](https://developer.amazon.com/en-US/docs/alexa/devconsole/launch-your-skill.html)
     - [**Certification**](https://developer.amazon.com/en-US/docs/alexa/devconsole/test-and-submit-your-skill.html)
     - [**Analytics**](https://developer.amazon.com/en-US/docs/alexa/devconsole/measure-skill-usage.html)
