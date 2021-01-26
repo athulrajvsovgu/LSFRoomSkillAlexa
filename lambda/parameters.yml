@@ -1,0 +1,277 @@
+urls:
+  rooms_search : "https://lsf.ovgu.de/qislsf/rds?state=extendedRoomSearch&type=1&next=extendedRoomSearch.vm&nextdir=ressourcenManager&searchCategory=detailedRoomSearch&asi="
+  room_details : "https://lsf.ovgu.de/qislsf/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoRaum&publishSubDir=raum&keep=y&raum.rgid="
+  rooms_search_header :
+  Content-Type : application/x-www-form-urlencoded
+
+room_types:
+  Lecture hall : 5
+  Lecture Hall small : 39
+  Lecture Hall FIN : 81
+  Seminar Room : 10
+
+translations:
+  equipments:
+    Audioanlage : audioanlage
+    Beamer : lcd projector 
+    CD-Player : cd player
+    Dia-Projektor :  slide projector 
+    DVD-Player :  dvd-player 
+    Fernsehgerät :  tv set 
+    Feste Bestuhlung :  fixed seats 
+    Flipchart :  flip chart 
+    Hörbehindertenanlage :  intercom system for hearing impaired 
+    Hörsaalgestühl :  auditorium seats 
+    Internetanschluss :  internet connection 
+    Kassettenrecorder :  cassette tape recorder 
+    Klavier/Flügel :  piano
+    Klimaanlage :  air conditioning
+    Kreidetafel :  blackboard 
+    Lautsprecher :  loudspeaker
+    Leinwand :  screen 
+    Lose Bestuhlung  :  free seating 
+    Lüftungsanlage :  ventilating system
+    Mikrofonanlage (portabel) :  microphone system (portable) 
+    Overhead-Projektor :  overhead projector
+    PC  :  computer 
+    Projektionsfläche :  projection screen
+    Rednerpult :  reading stand 
+    Sonnenschutz :  sunshades
+    Standmikrofon :  stationary microphone 
+    Telefon :  telephone
+    Tische :  tables 
+    Verdunkelungsmöglichkeit :  blinds (optional) 
+    Videokonferenz :  video conference
+    Videorecorder :  video-tape recorder 
+    Vorlesungsaufzeichnung : vorlesungsaufzeichnung
+    Whiteboard :  whiteboard
+    WLAN :  wireless lan 
+    Workstation :  workstation 
+    Sitzplätze  :  seats 
+
+ 
+
+equipments:
+  audioanlage : 38
+  lcd projector  : 6
+  cd player : 35
+  slide projector  : 4
+  dvd-player  : 11
+  tv set  : 24
+  fixed seats  : 21
+  flip chart  : 14
+  intercom system for hearing impaired  : 36
+  auditorium seats  : 29
+  internet connection  : 15
+  cassette tape recorder  : 9
+  piano : 18
+  air conditioning : 33
+  blackboard  : 1
+  loudspeaker : 20
+  screen  : 16
+  free seating  : 22
+  ventilating system : 34
+  microphone system (portable)  : 3
+  overhead projector : 5
+  computer  : 10
+  projection screen : 28
+  reading stand  : 19
+  sunshades : 31
+  stationary microphone  : 2
+  telephone : 32
+  tables  : 23
+  blinds (optional)  : 26
+  video conference : 37
+  video-tape recorder  : 25
+  vorlesungsaufzeichnung : 39
+  whiteboard : 30
+  wireless lan  : 27
+  workstation  : 7
+  seats  : 8
+
+buildings_num:
+  01 :  3
+  02 :  4
+  03 :  5
+  04 :  98
+  05 :  6
+  06 :  7
+  07 :  8
+  09 :  9
+  10 :  10
+  11 :  81|82|83
+  12 :  84
+  13 :  139
+  14 :  12|85|86|88|89
+  15 :  13|32|90|33|92
+  16 :  14
+  18 :  15
+  19 :  93
+  20 :  94
+  21 :  95
+  22 :  16|17|18|76|77|75
+  23 :  19
+  24 :  20
+  25 :  79
+  26 :  21|22
+  27 :  23
+  28 :  96
+  29 :  24
+  30 :  97
+  31 :  63
+  32 :  25
+  34 :  100
+  40 :  102
+  41 :  61
+  42 :  99
+  43 :  135
+  44 :  146
+  50 :  30
+  51 :  132
+  52 :  150
+  53 :  151
+  54 :  101
+  58 :  134
+  61 :  137
+  80 :  153
+  91 :  136
+
+  
+buildings:
+  experimentelle fabrik magdeburg :  148
+  g01 :  3
+  g02 :  4
+  g03 :  5
+  g04 :  98
+  g05 :  6
+  g06 :  7
+  g07 :  8
+  g09 :  9
+  g10 :  10
+  g11 :  81
+  g11.1 :  82
+  g11.2 :  83
+  g12 :  84
+  g13 :  139
+  g14 :  12
+  g14.1 :  85
+  g14.2 :  86
+  g14.3 :  88
+  g14.4 :  89
+  g15 :  13
+  g151 :  32
+  g15.1 :  90
+  g152 :  33
+  g15.2 :  91
+  g16 :  14
+  g18 :  15
+  g19 :  93
+  g20 :  94
+  g21 :  95
+  g22 :  16
+  g22a :  17
+  g22b :  18
+  g22c :  76
+  g22d :  77
+  g22e :  75
+  g23 :  19
+  g24 :  20
+  g25 :  79
+  g26 :  21
+  g26.1 :  22
+  g27 :  23
+  g28 :  96
+  g29 :  24
+  g30 :  97
+  g31 :  63
+  g32 :  25
+  g34 :  100
+  g40 :  102
+  g41 :  61
+  g42 :  99
+  g43 :  135
+  g44 :  146
+  g50 :  30
+  g51 :  132
+  g52 :  150
+  g53 :  151
+  g54 :  101
+  g58 :  134
+  g61 :  137
+  g80 :  153
+  g91 :  136
+  h1 :  35
+  h10 :  40
+  h101 :  125
+  h103 :  126
+  h104 :  127
+  h117 :  128
+  h13 :  41
+  h14 :  42
+  h14h :  107
+  h15 :  69
+  h15b :  108
+  h15t :  109
+  h16 :  110
+  h16a :  111
+  h16d :  112
+  h16h :  143
+  h17 :  43
+  h18 :  44
+  h19 :  71
+  h2 :  36
+  h20 :  66
+  h20a :  113
+  h21 :  114
+  h21a :  115
+  h22 :  45
+  h23 :  46
+  h26 :  70
+  h26a :  116
+  h28 :  47
+  h29 :  68
+  h29b :  117
+  h29c :  118
+  h3 :  74
+  h30 :  119
+  h33 :  120
+  h36 :  48
+  h37 :  121
+  h38 :  49
+  h39 :  50
+  h39a :  122
+  h3a :  104
+  h4 :  37
+  h40 :  51
+  h41 :  52
+  h43 :  53
+  h44 :  54
+  h5 :  62
+  h51 :  123
+  h55 :  124
+  h56 :  55
+  h5a :  105
+  h5b :  38
+  h6 :  106
+  h60a :  59
+  h60b :  56
+  h64 :  147
+  h65 :  133
+  h66 :  138
+  h67 :  149
+  h8 :  72
+  h9 :  64
+  h91 :  60
+  h97 :  152
+  krwe :  65
+  kulturhaus amo :  103
+  lin :  80
+  lukasklause altbau :  129
+  lukasklause neubau :  130
+  max-planck-institut :  141
+  messehalle :  131
+  stadthalle :  154
+  ufk :  67
+  univis sammelgebäude :  2
+  wh1 :  145
+  wh7 :  140

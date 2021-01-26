@@ -1,0 +1,2765 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "lsf room service",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "FindRoomWithDate",
+          "slots": [
+            {
+              "name": "buildingNumber",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "building {buildingNumber}",
+                "in building {buildingNumber}",
+                "{buildingNumber}",
+                "in building number {buildingNumber}",
+                "building number {buildingNumber}"
+              ]
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "on {date}",
+                "{date}"
+              ]
+            },
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "at {time}",
+                "{time}",
+                "I want the room at {time}",
+                "I want the room {time}"
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "I want the room for {duration} hours",
+                "{duration} hours"
+              ]
+            },
+            {
+              "name": "seats",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{seats}",
+                "I want {seats} seats"
+              ]
+            },
+            {
+              "name": "movableSeats",
+              "type": "YES_NO_SLOT",
+              "samples": [
+                "{movableSeats}"
+              ]
+            },
+            {
+              "name": "projector",
+              "type": "YES_NO_SLOT",
+              "samples": [
+                "{projector}"
+              ]
+            },
+            {
+              "name": "chalkboard",
+              "type": "YES_NO_SLOT",
+              "samples": [
+                "{chalkboard}"
+              ]
+            }
+          ],
+          "samples": [
+            "Give me a free room {time}",
+            "find a free room {time}",
+            "find a free room in building {buildingNumber} for  {duration} ",
+            "find a free room for {date}",
+            "find a free room for {date} at {time}  for {duration} ",
+            "Give me a free room in building {buildingNumber}",
+            "find a free room in building {buildingNumber} for {date} at {time}  for {duration}  hours",
+            "Give me a free room in building {buildingNumber} for {date} at {time}  for {duration}  hours"
+          ]
+        },
+        {
+          "name": "FindRoomImmediately",
+          "slots": [
+            {
+              "name": "buildingNumber",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "building number {buildingNumber}",
+                "in building number {buildingNumber}",
+                "in building {buildingNumber}",
+                "{buildingNumber}",
+                "building {buildingNumber}"
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "for {duration} hours",
+                "{duration} hours",
+                "I want the room for {duration} hours"
+              ]
+            },
+            {
+              "name": "seats",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{seats} seats",
+                "I want {seats} seats",
+                "{seats}"
+              ]
+            },
+            {
+              "name": "movableSeats",
+              "type": "YES_NO_SLOT",
+              "samples": [
+                "{movableSeats}"
+              ]
+            },
+            {
+              "name": "projector",
+              "type": "YES_NO_SLOT",
+              "samples": [
+                "{projector}"
+              ]
+            },
+            {
+              "name": "chalkboard",
+              "type": "YES_NO_SLOT",
+              "samples": [
+                "{chalkboard}"
+              ]
+            }
+          ],
+          "samples": [
+            "Find a free room now in building {buildingNumber} for {duration}",
+            "Find a free room now in building {buildingNumber}",
+            "Give me a free room now in building {buildingNumber}",
+            "Give me a free room now in building {buildingNumber} for {duration}"
+          ]
+        },
+        {
+          "name": "ReserveRoom",
+          "slots": [
+            {
+              "name": "roomOption",
+              "type": "CUSTOM_NUMBER",
+              "samples": [
+                "option {roomOption}",
+                "{roomOption}"
+              ]
+            },
+            {
+              "name": "roomReserve",
+              "type": "YES_NO_SLOT",
+              "samples": [
+                "{roomReserve}"
+              ]
+            }
+          ],
+          "samples": [
+            "intent chaining"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "RemoveReservation",
+          "slots": [
+            {
+              "name": "confirmCancellation",
+              "type": "YES_NO_SLOT",
+              "samples": [
+                "{confirmCancellation}"
+              ]
+            }
+          ],
+          "samples": [
+            "I want to cancel my reservation",
+            "I would like to cancel my reservation",
+            "I want to drop my reservation",
+            "I would like to delete my reservation",
+            "I would like to remove my reservation",
+            "I would like to drop my reservation",
+            "I want to remove my reservation",
+            "I want to delete my reservation"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "TRUE",
+              "name": {
+                "value": "yes",
+                "synonyms": [
+                  "yep",
+                  "yeah",
+                  "I do",
+                  "yes please",
+                  "you know it"
+                ]
+              }
+            },
+            {
+              "id": "FALSE",
+              "name": {
+                "value": "no",
+                "synonyms": [
+                  "nope",
+                  "I do not",
+                  "no thank you"
+                ]
+              }
+            }
+          ],
+          "name": "YES_NO_SLOT"
+        },
+        {
+          "values": [
+            {
+              "id": "1",
+              "name": {
+                "value": "1",
+                "synonyms": [
+                  "ONE",
+                  "one",
+                  "One",
+                  "FIRST",
+                  "first",
+                  "First"
+                ]
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "2",
+                "synonyms": [
+                  "TWO",
+                  "two",
+                  "Two",
+                  "SECOND",
+                  "second",
+                  "Second"
+                ]
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "3",
+                "synonyms": [
+                  "THREE",
+                  "three",
+                  "Three",
+                  "THIRD",
+                  "third",
+                  "Third"
+                ]
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "4",
+                "synonyms": [
+                  "FOUR",
+                  "four",
+                  "Four",
+                  "FOURTH",
+                  "fourth",
+                  "Fourth"
+                ]
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "5",
+                "synonyms": [
+                  "FIVE",
+                  "five",
+                  "Five",
+                  "FIFTH",
+                  "fifth",
+                  "Fifth"
+                ]
+              }
+            },
+            {
+              "id": "6",
+              "name": {
+                "value": "6",
+                "synonyms": [
+                  "SIX",
+                  "six",
+                  "Six",
+                  "SIXTH",
+                  "sixth",
+                  "Sixth"
+                ]
+              }
+            },
+            {
+              "id": "7",
+              "name": {
+                "value": "7",
+                "synonyms": [
+                  "SEVEN",
+                  "seven",
+                  "Seven",
+                  "SEVENTH",
+                  "seventh",
+                  "Seventh"
+                ]
+              }
+            },
+            {
+              "id": "8",
+              "name": {
+                "value": "8",
+                "synonyms": [
+                  "EIGHT",
+                  "eight",
+                  "Eight",
+                  "EIGHTH",
+                  "eighth",
+                  "Eighth"
+                ]
+              }
+            },
+            {
+              "id": "9",
+              "name": {
+                "value": "9",
+                "synonyms": [
+                  "NINE",
+                  "nine",
+                  "Nine",
+                  "NINTH",
+                  "ninth",
+                  "Ninth"
+                ]
+              }
+            },
+            {
+              "id": "10",
+              "name": {
+                "value": "10",
+                "synonyms": [
+                  "TEN",
+                  "ten",
+                  "Ten",
+                  "TENTH",
+                  "tenth",
+                  "Tenth"
+                ]
+              }
+            },
+            {
+              "id": "11",
+              "name": {
+                "value": "11",
+                "synonyms": [
+                  "ELEVEN",
+                  "eleven",
+                  "Eleven",
+                  "ELEVENTH",
+                  "eleventh",
+                  "Eleventh"
+                ]
+              }
+            },
+            {
+              "id": "12",
+              "name": {
+                "value": "12",
+                "synonyms": [
+                  "TWELVE",
+                  "twelve",
+                  "Twelve",
+                  "TWELFTH",
+                  "twelfth",
+                  "Twelfth"
+                ]
+              }
+            },
+            {
+              "id": "13",
+              "name": {
+                "value": "13",
+                "synonyms": [
+                  "THIRTEEN",
+                  "thirteen",
+                  "Thirteen",
+                  "THIRTEENTH",
+                  "thirteenth",
+                  "Thirteenth"
+                ]
+              }
+            },
+            {
+              "id": "14",
+              "name": {
+                "value": "14",
+                "synonyms": [
+                  "FOURTEEN",
+                  "fourteen",
+                  "Fourteen",
+                  "FOURTEENTH",
+                  "fourteenth",
+                  "Fourteenth"
+                ]
+              }
+            },
+            {
+              "id": "15",
+              "name": {
+                "value": "15",
+                "synonyms": [
+                  "FIFTEEN",
+                  "fifteen",
+                  "Fifteen",
+                  "FIFTEENTH",
+                  "fifteenth",
+                  "Fifteenth"
+                ]
+              }
+            },
+            {
+              "id": "16",
+              "name": {
+                "value": "16",
+                "synonyms": [
+                  "SIXTEEN",
+                  "sixteen",
+                  "Sixteen",
+                  "SIXTEENTH",
+                  "sixteenth",
+                  "Sixteenth"
+                ]
+              }
+            },
+            {
+              "id": "17",
+              "name": {
+                "value": "17",
+                "synonyms": [
+                  "SEVENTEEN",
+                  "seventeen",
+                  "Seventeen",
+                  "SEVENTEENTH",
+                  "seventeenth",
+                  "Seventeenth"
+                ]
+              }
+            },
+            {
+              "id": "18",
+              "name": {
+                "value": "18",
+                "synonyms": [
+                  "EIGHTEEN",
+                  "eighteen",
+                  "Eighteen",
+                  "EIGHTEENTH",
+                  "eighteenth",
+                  "Eighteenth"
+                ]
+              }
+            },
+            {
+              "id": "19",
+              "name": {
+                "value": "19",
+                "synonyms": [
+                  "NINETEEN",
+                  "nineteen",
+                  "Nineteen",
+                  "NINETEENTH",
+                  "nineteenth",
+                  "Nineteenth"
+                ]
+              }
+            },
+            {
+              "id": "20",
+              "name": {
+                "value": "20",
+                "synonyms": [
+                  "TWENTY",
+                  "twenty",
+                  "Twenty",
+                  "TWENTIETH",
+                  "twentieth",
+                  "Twentieth"
+                ]
+              }
+            },
+            {
+              "id": "21",
+              "name": {
+                "value": "21",
+                "synonyms": [
+                  "TWENTY ONE",
+                  "twenty one",
+                  "Twenty One",
+                  "TWENTY FIRST",
+                  "twenty first",
+                  "Twenty First"
+                ]
+              }
+            },
+            {
+              "id": "22",
+              "name": {
+                "value": "22",
+                "synonyms": [
+                  "TWENTY TWO",
+                  "twenty two",
+                  "Twenty Two",
+                  "TWENTY SECOND",
+                  "twenty second",
+                  "Twenty Second"
+                ]
+              }
+            },
+            {
+              "id": "23",
+              "name": {
+                "value": "23",
+                "synonyms": [
+                  "TWENTY THREE",
+                  "twenty three",
+                  "Twenty Three",
+                  "TWENTY THIRD",
+                  "twenty third",
+                  "Twenty Third"
+                ]
+              }
+            },
+            {
+              "id": "24",
+              "name": {
+                "value": "24",
+                "synonyms": [
+                  "TWENTY FOUR",
+                  "twenty four",
+                  "Twenty Four",
+                  "TWENTY FOURTH",
+                  "twenty fourth",
+                  "Twenty Fourth"
+                ]
+              }
+            },
+            {
+              "id": "25",
+              "name": {
+                "value": "25",
+                "synonyms": [
+                  "TWENTY FIVE",
+                  "twenty five",
+                  "Twenty Five",
+                  "TWENTY FIFTH",
+                  "twenty fifth",
+                  "Twenty Fifth"
+                ]
+              }
+            },
+            {
+              "id": "26",
+              "name": {
+                "value": "26",
+                "synonyms": [
+                  "TWENTY SIX",
+                  "twenty six",
+                  "Twenty Six",
+                  "TWENTY SIXTH",
+                  "twenty sixth",
+                  "Twenty Sixth"
+                ]
+              }
+            },
+            {
+              "id": "27",
+              "name": {
+                "value": "27",
+                "synonyms": [
+                  "TWENTY SEVEN",
+                  "twenty seven",
+                  "Twenty Seven",
+                  "TWENTY SEVENTH",
+                  "twenty seventh",
+                  "Twenty Seventh"
+                ]
+              }
+            },
+            {
+              "id": "28",
+              "name": {
+                "value": "28",
+                "synonyms": [
+                  "TWENTY EIGHT",
+                  "twenty eight",
+                  "Twenty Eight",
+                  "TWENTY EIGHTH",
+                  "twenty eighth",
+                  "Twenty Eighth"
+                ]
+              }
+            },
+            {
+              "id": "29",
+              "name": {
+                "value": "29",
+                "synonyms": [
+                  "TWENTY NINE",
+                  "twenty nine",
+                  "Twenty Nine",
+                  "TWENTY NINTH",
+                  "twenty ninth",
+                  "Twenty Ninth"
+                ]
+              }
+            },
+            {
+              "id": "30",
+              "name": {
+                "value": "30",
+                "synonyms": [
+                  "THIRTY",
+                  "thirty",
+                  "Thirty",
+                  "THIRTIETH",
+                  "thirtieth",
+                  "Thirtieth"
+                ]
+              }
+            },
+            {
+              "id": "31",
+              "name": {
+                "value": "31",
+                "synonyms": [
+                  "THIRTY ONE",
+                  "thirty one",
+                  "Thirty One",
+                  "THIRTY FIRST",
+                  "thirty first",
+                  "Thirty First"
+                ]
+              }
+            },
+            {
+              "id": "32",
+              "name": {
+                "value": "32",
+                "synonyms": [
+                  "THIRTY TWO",
+                  "thirty two",
+                  "Thirty Two",
+                  "THIRTY SECOND",
+                  "thirty second",
+                  "Thirty Second"
+                ]
+              }
+            },
+            {
+              "id": "33",
+              "name": {
+                "value": "33",
+                "synonyms": [
+                  "THIRTY THREE",
+                  "thirty three",
+                  "Thirty Three",
+                  "THIRTY THIRD",
+                  "thirty third",
+                  "Thirty Third"
+                ]
+              }
+            },
+            {
+              "id": "34",
+              "name": {
+                "value": "34",
+                "synonyms": [
+                  "THIRTY FOUR",
+                  "thirty four",
+                  "Thirty Four",
+                  "THIRTY FOURTH",
+                  "thirty fourth",
+                  "Thirty Fourth"
+                ]
+              }
+            },
+            {
+              "id": "35",
+              "name": {
+                "value": "35",
+                "synonyms": [
+                  "THIRTY FIVE",
+                  "thirty five",
+                  "Thirty Five",
+                  "THIRTY FIFTH",
+                  "thirty fifth",
+                  "Thirty Fifth"
+                ]
+              }
+            },
+            {
+              "id": "36",
+              "name": {
+                "value": "36",
+                "synonyms": [
+                  "THIRTY SIX",
+                  "thirty six",
+                  "Thirty Six",
+                  "THIRTY SIXTH",
+                  "thirty sixth",
+                  "Thirty Sixth"
+                ]
+              }
+            },
+            {
+              "id": "37",
+              "name": {
+                "value": "37",
+                "synonyms": [
+                  "THIRTY SEVEN",
+                  "thirty seven",
+                  "Thirty Seven",
+                  "THIRTY SEVENTH",
+                  "thirty seventh",
+                  "Thirty Seventh"
+                ]
+              }
+            },
+            {
+              "id": "38",
+              "name": {
+                "value": "38",
+                "synonyms": [
+                  "THIRTY EIGHT",
+                  "thirty eight",
+                  "Thirty Eight",
+                  "THIRTY EIGHTH",
+                  "thirty eighth",
+                  "Thirty Eighth"
+                ]
+              }
+            },
+            {
+              "id": "39",
+              "name": {
+                "value": "39",
+                "synonyms": [
+                  "THIRTY NINE",
+                  "thirty nine",
+                  "Thirty Nine",
+                  "THIRTY NINTH",
+                  "thirty ninth",
+                  "Thirty Ninth"
+                ]
+              }
+            },
+            {
+              "id": "40",
+              "name": {
+                "value": "40",
+                "synonyms": [
+                  "Fourtieth",
+                  "FORTY",
+                  "FOURTY",
+                  "fourty",
+                  "Fourty",
+                  "FOURTIETH",
+                  "fourtieth",
+                  "forty",
+                  "Forty",
+                  "FORTIETH",
+                  "Fortieth",
+                  "fortieth"
+                ]
+              }
+            },
+            {
+              "id": "41",
+              "name": {
+                "value": "41",
+                "synonyms": [
+                  "FORTY ONE",
+                  "Fourty First",
+                  "Fourty First",
+                  "FOURTY ONE",
+                  "fourty one",
+                  "Fourty One",
+                  "FOURTY FIRST",
+                  "fourty first",
+                  "forty one",
+                  "Forty One",
+                  "FORTY FIRST",
+                  "Forty First",
+                  "forty first"
+                ]
+              }
+            },
+            {
+              "id": "42",
+              "name": {
+                "value": "42",
+                "synonyms": [
+                  "FORTY TWO",
+                  "Fourty Second",
+                  "FOURTY TWO",
+                  "fourty two",
+                  "Fourty Two",
+                  "FOURTY SECOND",
+                  "fourty second",
+                  "forty two",
+                  "Forty Two",
+                  "FORTY SECOND",
+                  "Forty Second",
+                  "forty second"
+                ]
+              }
+            },
+            {
+              "id": "43",
+              "name": {
+                "value": "43",
+                "synonyms": [
+                  "FORTY THREE",
+                  "Fourty Third",
+                  "FOURTY THREE",
+                  "fourty three",
+                  "Fourty Three",
+                  "FOURTY THIRD",
+                  "fourty third",
+                  "forty three",
+                  "Forty Three",
+                  "FORTY THIRD",
+                  "Forty Third",
+                  "forty third"
+                ]
+              }
+            },
+            {
+              "id": "44",
+              "name": {
+                "value": "44",
+                "synonyms": [
+                  "fourty forth",
+                  "Fourty Forth",
+                  "FOURTY FORTH",
+                  "forty forth",
+                  "Forty Forth",
+                  "FORTY FORTH",
+                  "forty fourth",
+                  "Forty Fourth",
+                  "FORTY FOURTH",
+                  "Forty Four",
+                  "forty four",
+                  "FORTY FOUR",
+                  "Fourty Fourth",
+                  "fourty fourth",
+                  "FOURTY FOURTH",
+                  "Fourty Four",
+                  "fourty four",
+                  "FOURTY FOUR"
+                ]
+              }
+            },
+            {
+              "id": "45",
+              "name": {
+                "value": "45",
+                "synonyms": [
+                  "FORTY FIVE",
+                  "Fourty Fifth",
+                  "FOURTY FIVE",
+                  "fourty five",
+                  "Fourty Five",
+                  "FOURTY FIFTH",
+                  "fourty fifth",
+                  "forty five",
+                  "Forty Five",
+                  "FORTY FIFTH",
+                  "Forty Fifth",
+                  "forty fifth"
+                ]
+              }
+            },
+            {
+              "id": "46",
+              "name": {
+                "value": "46",
+                "synonyms": [
+                  "FORTY SIX",
+                  "Fourty Sixth",
+                  "FOURTY SIX",
+                  "fourty six",
+                  "Fourty Six",
+                  "FOURTY SIXTH",
+                  "fourty sixth",
+                  "forty six",
+                  "Forty Six",
+                  "FORTY SIXTH",
+                  "Forty Sixth",
+                  "forty sixth"
+                ]
+              }
+            },
+            {
+              "id": "47",
+              "name": {
+                "value": "47",
+                "synonyms": [
+                  "FORTY SEVEN",
+                  "Fourty Seventh",
+                  "FOURTY SEVEN",
+                  "fourty seven",
+                  "Fourty Seven",
+                  "FOURTY SEVENTH",
+                  "fourty seventh",
+                  "forty seven",
+                  "Forty Seven",
+                  "FORTY SEVENTH",
+                  "Forty Seventh",
+                  "forty seventh"
+                ]
+              }
+            },
+            {
+              "id": "48",
+              "name": {
+                "value": "48",
+                "synonyms": [
+                  "Fourty Eighth",
+                  "FORTY EIGHT",
+                  "FOURTY EIGHT",
+                  "fourty eight",
+                  "Fourty Eight",
+                  "FOURTY EIGHTH",
+                  "fourty eighth",
+                  "forty eight",
+                  "Forty Eight",
+                  "FORTY EIGHTH",
+                  "Forty Eighth",
+                  "forty eighth"
+                ]
+              }
+            },
+            {
+              "id": "49",
+              "name": {
+                "value": "49",
+                "synonyms": [
+                  "FORTY NINE",
+                  "Fourty Ninth",
+                  "FOURTY NINE",
+                  "fourty nine",
+                  "Fourty Nine",
+                  "FOURTY NINTH",
+                  "fourty ninth",
+                  "forty nine",
+                  "Forty Nine",
+                  "FORTY NINTH",
+                  "Forty Ninth",
+                  "forty ninth"
+                ]
+              }
+            },
+            {
+              "id": "50",
+              "name": {
+                "value": "50",
+                "synonyms": [
+                  "FIFTY",
+                  "fifty",
+                  "Fifty",
+                  "FIFTIETH",
+                  "fiftieth",
+                  "Fiftieth"
+                ]
+              }
+            },
+            {
+              "id": "51",
+              "name": {
+                "value": "51",
+                "synonyms": [
+                  "FIFTY ONE",
+                  "fifty one",
+                  "Fifty One",
+                  "FIFTY FIRST",
+                  "fifty first",
+                  "Fifty First"
+                ]
+              }
+            },
+            {
+              "id": "52",
+              "name": {
+                "value": "52",
+                "synonyms": [
+                  "FIFTY TWO",
+                  "fifty two",
+                  "Fifty Two",
+                  "FIFTY SECOND",
+                  "fifty second",
+                  "Fifty Second"
+                ]
+              }
+            },
+            {
+              "id": "53",
+              "name": {
+                "value": "53",
+                "synonyms": [
+                  "FIFTY THREE",
+                  "fifty three",
+                  "Fifty Three",
+                  "FIFTY THIRD",
+                  "fifty third",
+                  "Fifty Third"
+                ]
+              }
+            },
+            {
+              "id": "54",
+              "name": {
+                "value": "54",
+                "synonyms": [
+                  "FIFTY FOUR",
+                  "fifty four",
+                  "Fifty Four",
+                  "FIFTY FOURTH",
+                  "fifty fourth",
+                  "Fifty Fourth"
+                ]
+              }
+            },
+            {
+              "id": "55",
+              "name": {
+                "value": "55",
+                "synonyms": [
+                  "FIFTY FIVE",
+                  "fifty five",
+                  "Fifty Five",
+                  "FIFTY FIFTH",
+                  "fifty fifth",
+                  "Fifty Fifth"
+                ]
+              }
+            },
+            {
+              "id": "56",
+              "name": {
+                "value": "56",
+                "synonyms": [
+                  "FIFTY SIX",
+                  "fifty six",
+                  "Fifty Six",
+                  "FIFTY SIXTH",
+                  "fifty sixth",
+                  "Fifty Sixth"
+                ]
+              }
+            },
+            {
+              "id": "57",
+              "name": {
+                "value": "57",
+                "synonyms": [
+                  "FIFTY SEVEN",
+                  "fifty seven",
+                  "Fifty Seven",
+                  "FIFTY SEVENTH",
+                  "fifty seventh",
+                  "Fifty Seventh"
+                ]
+              }
+            },
+            {
+              "id": "58",
+              "name": {
+                "value": "58",
+                "synonyms": [
+                  "FIFTY EIGHT",
+                  "fifty eight",
+                  "Fifty Eight",
+                  "FIFTY EIGHTH",
+                  "fifty eighth",
+                  "Fifty Eighth"
+                ]
+              }
+            },
+            {
+              "id": "59",
+              "name": {
+                "value": "59",
+                "synonyms": [
+                  "FIFTY NINE",
+                  "fifty nine",
+                  "Fifty Nine",
+                  "FIFTY NINTH",
+                  "fifty ninth",
+                  "Fifty Ninth"
+                ]
+              }
+            },
+            {
+              "id": "60",
+              "name": {
+                "value": "60",
+                "synonyms": [
+                  "SIXTY",
+                  "sixty",
+                  "Sixty",
+                  "SIXTIETH",
+                  "sixtieth",
+                  "Sixtieth"
+                ]
+              }
+            },
+            {
+              "id": "61",
+              "name": {
+                "value": "61",
+                "synonyms": [
+                  "SIXTY ONE",
+                  "sixty one",
+                  "Sixty One",
+                  "SIXTY FIRST",
+                  "sixty first",
+                  "Sixty First"
+                ]
+              }
+            },
+            {
+              "id": "62",
+              "name": {
+                "value": "62",
+                "synonyms": [
+                  "SIXTY TWO",
+                  "sixty two",
+                  "Sixty Two",
+                  "SIXTY SECOND",
+                  "sixty second",
+                  "Sixty Second"
+                ]
+              }
+            },
+            {
+              "id": "63",
+              "name": {
+                "value": "63",
+                "synonyms": [
+                  "SIXTY THREE",
+                  "sixty three",
+                  "Sixty Three",
+                  "SIXTY THIRD",
+                  "sixty third",
+                  "Sixty Third"
+                ]
+              }
+            },
+            {
+              "id": "64",
+              "name": {
+                "value": "64",
+                "synonyms": [
+                  "SIXTY FOUR",
+                  "sixty four",
+                  "Sixty Four",
+                  "SIXTY FOURTH",
+                  "sixty fourth",
+                  "Sixty Fourth"
+                ]
+              }
+            },
+            {
+              "id": "65",
+              "name": {
+                "value": "65",
+                "synonyms": [
+                  "SIXTY FIVE",
+                  "sixty five",
+                  "Sixty Five",
+                  "SIXTY FIFTH",
+                  "sixty fifth",
+                  "Sixty Fifth"
+                ]
+              }
+            },
+            {
+              "id": "66",
+              "name": {
+                "value": "66",
+                "synonyms": [
+                  "SIXTY SIX",
+                  "sixty six",
+                  "Sixty Six",
+                  "SIXTY SIXTH",
+                  "sixty sixth",
+                  "Sixty Sixth"
+                ]
+              }
+            },
+            {
+              "id": "67",
+              "name": {
+                "value": "67",
+                "synonyms": [
+                  "SIXTY SEVEN",
+                  "sixty seven",
+                  "Sixty Seven",
+                  "SIXTY SEVENTH",
+                  "sixty seventh",
+                  "Sixty Seventh"
+                ]
+              }
+            },
+            {
+              "id": "68",
+              "name": {
+                "value": "68",
+                "synonyms": [
+                  "SIXTY EIGHT",
+                  "sixty eight",
+                  "Sixty Eight",
+                  "SIXTY EIGHTH",
+                  "sixty eighth",
+                  "Sixty Eighth"
+                ]
+              }
+            },
+            {
+              "id": "69",
+              "name": {
+                "value": "69",
+                "synonyms": [
+                  "SIXTY NINE",
+                  "sixty nine",
+                  "Sixty Nine",
+                  "SIXTY NINTH",
+                  "sixty ninth",
+                  "Sixty Ninth"
+                ]
+              }
+            },
+            {
+              "id": "70",
+              "name": {
+                "value": "70",
+                "synonyms": [
+                  "SEVENTY",
+                  "seventy",
+                  "Seventy",
+                  "SEVENTIETH",
+                  "seventieth",
+                  "Seventieth"
+                ]
+              }
+            },
+            {
+              "id": "71",
+              "name": {
+                "value": "71",
+                "synonyms": [
+                  "SEVENTY ONE",
+                  "seventy one",
+                  "Seventy One",
+                  "SEVENTY FIRST",
+                  "seventy first",
+                  "Seventy First"
+                ]
+              }
+            },
+            {
+              "id": "72",
+              "name": {
+                "value": "72",
+                "synonyms": [
+                  "SEVENTY TWO",
+                  "seventy two",
+                  "Seventy Two",
+                  "SEVENTY SECOND",
+                  "seventy second",
+                  "Seventy Second"
+                ]
+              }
+            },
+            {
+              "id": "73",
+              "name": {
+                "value": "73",
+                "synonyms": [
+                  "SEVENTY THREE",
+                  "seventy three",
+                  "Seventy Three",
+                  "SEVENTY THIRD",
+                  "seventy third",
+                  "Seventy Third"
+                ]
+              }
+            },
+            {
+              "id": "74",
+              "name": {
+                "value": "74",
+                "synonyms": [
+                  "SEVENTY FOUR",
+                  "seventy four",
+                  "Seventy Four",
+                  "SEVENTY FOURTH",
+                  "seventy fourth",
+                  "Seventy Fourth"
+                ]
+              }
+            },
+            {
+              "id": "75",
+              "name": {
+                "value": "75",
+                "synonyms": [
+                  "SEVENTY FIVE",
+                  "seventy five",
+                  "Seventy Five",
+                  "SEVENTY FIFTH",
+                  "seventy fifth",
+                  "Seventy Fifth"
+                ]
+              }
+            },
+            {
+              "id": "76",
+              "name": {
+                "value": "76",
+                "synonyms": [
+                  "SEVENTY SIX",
+                  "seventy six",
+                  "Seventy Six",
+                  "SEVENTY SIXTH",
+                  "seventy sixth",
+                  "Seventy Sixth"
+                ]
+              }
+            },
+            {
+              "id": "77",
+              "name": {
+                "value": "77",
+                "synonyms": [
+                  "SEVENTY SEVEN",
+                  "seventy seven",
+                  "Seventy Seven",
+                  "SEVENTY SEVENTH",
+                  "seventy seventh",
+                  "Seventy Seventh"
+                ]
+              }
+            },
+            {
+              "id": "78",
+              "name": {
+                "value": "78",
+                "synonyms": [
+                  "SEVENTY EIGHT",
+                  "seventy eight",
+                  "Seventy Eight",
+                  "SEVENTY EIGHTH",
+                  "seventy eighth",
+                  "Seventy Eighth"
+                ]
+              }
+            },
+            {
+              "id": "79",
+              "name": {
+                "value": "79",
+                "synonyms": [
+                  "SEVENTY NINE",
+                  "seventy nine",
+                  "Seventy Nine",
+                  "SEVENTY NINTH",
+                  "seventy ninth",
+                  "Seventy Ninth"
+                ]
+              }
+            },
+            {
+              "id": "80",
+              "name": {
+                "value": "80",
+                "synonyms": [
+                  "EIGHTY",
+                  "eighty",
+                  "Eighty",
+                  "EIGHTIETH",
+                  "eightieth",
+                  "Eightieth"
+                ]
+              }
+            },
+            {
+              "id": "81",
+              "name": {
+                "value": "81",
+                "synonyms": [
+                  "EIGHTY ONE",
+                  "eighty one",
+                  "Eighty One",
+                  "EIGHTY FIRST",
+                  "eighty first",
+                  "Eighty First"
+                ]
+              }
+            },
+            {
+              "id": "82",
+              "name": {
+                "value": "82",
+                "synonyms": [
+                  "EIGHTY TWO",
+                  "eighty two",
+                  "Eighty Two",
+                  "EIGHTY SECOND",
+                  "eighty second",
+                  "Eighty Second"
+                ]
+              }
+            },
+            {
+              "id": "83",
+              "name": {
+                "value": "83",
+                "synonyms": [
+                  "EIGHTY THREE",
+                  "eighty three",
+                  "Eighty Three",
+                  "EIGHTY THIRD",
+                  "eighty third",
+                  "Eighty Third"
+                ]
+              }
+            },
+            {
+              "id": "84",
+              "name": {
+                "value": "84",
+                "synonyms": [
+                  "EIGHTY FOUR",
+                  "eighty four",
+                  "Eighty Four",
+                  "EIGHTY FOURTH",
+                  "eighty fourth",
+                  "Eighty Fourth"
+                ]
+              }
+            },
+            {
+              "id": "85",
+              "name": {
+                "value": "85",
+                "synonyms": [
+                  "EIGHTY FIVE",
+                  "eighty five",
+                  "Eighty Five",
+                  "EIGHTY FIFTH",
+                  "eighty fifth",
+                  "Eighty Fifth"
+                ]
+              }
+            },
+            {
+              "id": "86",
+              "name": {
+                "value": "86",
+                "synonyms": [
+                  "EIGHTY SIX",
+                  "eighty six",
+                  "Eighty Six",
+                  "EIGHTY SIXTH",
+                  "eighty sixth",
+                  "Eighty Sixth"
+                ]
+              }
+            },
+            {
+              "id": "87",
+              "name": {
+                "value": "87",
+                "synonyms": [
+                  "EIGHTY SEVEN",
+                  "eighty seven",
+                  "Eighty Seven",
+                  "EIGHTY SEVENTH",
+                  "eighty seventh",
+                  "Eighty Seventh"
+                ]
+              }
+            },
+            {
+              "id": "88",
+              "name": {
+                "value": "88",
+                "synonyms": [
+                  "EIGHTY EIGHT",
+                  "eighty eight",
+                  "Eighty Eight",
+                  "EIGHTY EIGHTH",
+                  "eighty eighth",
+                  "Eighty Eighth"
+                ]
+              }
+            },
+            {
+              "id": "89",
+              "name": {
+                "value": "89",
+                "synonyms": [
+                  "EIGHTY NINE",
+                  "eighty nine",
+                  "Eighty Nine",
+                  "EIGHTY NINTH",
+                  "eighty ninth",
+                  "Eighty Ninth"
+                ]
+              }
+            },
+            {
+              "id": "90",
+              "name": {
+                "value": "90",
+                "synonyms": [
+                  "NINETY",
+                  "ninety",
+                  "Ninety",
+                  "NINETIETH",
+                  "ninetieth",
+                  "Ninetieth"
+                ]
+              }
+            },
+            {
+              "id": "91",
+              "name": {
+                "value": "91",
+                "synonyms": [
+                  "NINETY ONE",
+                  "ninety one",
+                  "Ninety One",
+                  "NINETY FIRST",
+                  "ninety first",
+                  "Ninety First"
+                ]
+              }
+            },
+            {
+              "id": "92",
+              "name": {
+                "value": "92",
+                "synonyms": [
+                  "NINETY TWO",
+                  "ninety two",
+                  "Ninety Two",
+                  "NINETY SECOND",
+                  "ninety second",
+                  "Ninety Second"
+                ]
+              }
+            },
+            {
+              "id": "93",
+              "name": {
+                "value": "93",
+                "synonyms": [
+                  "NINETY THREE",
+                  "ninety three",
+                  "Ninety Three",
+                  "NINETY THIRD",
+                  "ninety third",
+                  "Ninety Third"
+                ]
+              }
+            },
+            {
+              "id": "94",
+              "name": {
+                "value": "94",
+                "synonyms": [
+                  "NINETY FOUR",
+                  "ninety four",
+                  "Ninety Four",
+                  "NINETY FOURTH",
+                  "ninety fourth",
+                  "Ninety Fourth"
+                ]
+              }
+            },
+            {
+              "id": "95",
+              "name": {
+                "value": "95",
+                "synonyms": [
+                  "NINETY FIVE",
+                  "ninety five",
+                  "Ninety Five",
+                  "NINETY FIFTH",
+                  "ninety fifth",
+                  "Ninety Fifth"
+                ]
+              }
+            },
+            {
+              "id": "96",
+              "name": {
+                "value": "96",
+                "synonyms": [
+                  "NINETY SIX",
+                  "ninety six",
+                  "Ninety Six",
+                  "NINETY SIXTH",
+                  "ninety sixth",
+                  "Ninety Sixth"
+                ]
+              }
+            },
+            {
+              "id": "97",
+              "name": {
+                "value": "97",
+                "synonyms": [
+                  "NINETY SEVEN",
+                  "ninety seven",
+                  "Ninety Seven",
+                  "NINETY SEVENTH",
+                  "ninety seventh",
+                  "Ninety Seventh"
+                ]
+              }
+            },
+            {
+              "id": "98",
+              "name": {
+                "value": "98",
+                "synonyms": [
+                  "NINETY EIGHT",
+                  "ninety eight",
+                  "Ninety Eight",
+                  "NINETY EIGHTH",
+                  "ninety eighth",
+                  "Ninety Eighth"
+                ]
+              }
+            },
+            {
+              "id": "99",
+              "name": {
+                "value": "99",
+                "synonyms": [
+                  "NINETY NINE",
+                  "ninety nine",
+                  "Ninety Nine",
+                  "NINETY NINTH",
+                  "ninety ninth",
+                  "Ninety Ninth"
+                ]
+              }
+            },
+            {
+              "id": "100",
+              "name": {
+                "value": "100",
+                "synonyms": [
+                  "ONE HUNDRED",
+                  "one hundred",
+                  "One Hundred",
+                  "HUNDREDTH",
+                  "hundredth",
+                  "Hundredth"
+                ]
+              }
+            }
+          ],
+          "name": "CUSTOM_NUMBER"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "FindRoomWithDate",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "buildingNumber",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1581398870368.515279972115"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.1502469169150.1419685418296.648895267567",
+                  "values": [
+                    "44",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "91",
+                    "50",
+                    "51",
+                    "52",
+                    "53",
+                    "10",
+                    "54",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "58",
+                    "15",
+                    "16",
+                    "18",
+                    "19",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "61",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "32",
+                    "34",
+                    "80",
+                    "40",
+                    "41",
+                    "42",
+                    "43"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1557130119395.748945691173"
+              },
+              "validations": [
+                {
+                  "type": "isInDuration",
+                  "prompt": "Slot.Validation.1557130119395.748945691173.436708183046",
+                  "start": "P0D",
+                  "end": "P3D"
+                }
+              ]
+            },
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1557130119395.86111743416"
+              },
+              "validations": [
+                {
+                  "type": "isNotInDuration",
+                  "prompt": "Slot.Validation.171756864885.278027064893.410847606083",
+                  "start": "-PT24H",
+                  "end": "PT0H"
+                }
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1557130119395.1314722197412"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThan",
+                  "prompt": "Slot.Validation.1502469169150.457467705085.1087172656803",
+                  "value": "0"
+                },
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.1502469169150.457467705085.1220930956020",
+                  "value": "5"
+                }
+              ]
+            },
+            {
+              "name": "seats",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1557130119395.1169189621080"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThan",
+                  "prompt": "Slot.Validation.1557130119395.1169189621080.155352733939",
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "name": "movableSeats",
+              "type": "YES_NO_SLOT",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1557130119395.321246766099"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1557130119395.321246766099.1044154313345"
+                }
+              ]
+            },
+            {
+              "name": "projector",
+              "type": "YES_NO_SLOT",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1557130119395.753557364486"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1557130119395.753557364486.1448043756191"
+                }
+              ]
+            },
+            {
+              "name": "chalkboard",
+              "type": "YES_NO_SLOT",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1557130119395.869425150518"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1557130119395.869425150518.1250090186694"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FindRoomImmediately",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "buildingNumber",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.141106832008.190294647177"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.623573378133.86375261890.1114288312699",
+                  "values": [
+                    "44",
+                    "01",
+                    "02",
+                    "03",
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "91",
+                    "50",
+                    "51",
+                    "52",
+                    "53",
+                    "10",
+                    "54",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "58",
+                    "15",
+                    "16",
+                    "18",
+                    "19",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "61",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "32",
+                    "34",
+                    "80",
+                    "40",
+                    "41",
+                    "42",
+                    "43"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "duration",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.623573378133.1295654479569"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThan",
+                  "prompt": "Slot.Validation.623573378133.1295654479569.1402112402436",
+                  "value": "0"
+                },
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.623573378133.1295654479569.331454872300",
+                  "value": "5"
+                }
+              ]
+            },
+            {
+              "name": "seats",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.623573378133.132068539957"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThan",
+                  "prompt": "Slot.Validation.623573378133.132068539957.705836348083",
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "name": "movableSeats",
+              "type": "YES_NO_SLOT",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.623573378133.359820177834"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.623573378133.359820177834.577558965031"
+                }
+              ]
+            },
+            {
+              "name": "projector",
+              "type": "YES_NO_SLOT",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.623573378133.1137979886305"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.623573378133.1137979886305.977660722064"
+                }
+              ]
+            },
+            {
+              "name": "chalkboard",
+              "type": "YES_NO_SLOT",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.623573378133.1159988821637"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.623573378133.1159988821637.228410074844"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ReserveRoom",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "roomOption",
+              "type": "CUSTOM_NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1035705105899.501898892350"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1135887599761.1576000467717.1054982283293"
+                }
+              ]
+            },
+            {
+              "name": "roomReserve",
+              "type": "YES_NO_SLOT",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1135887599761.1104756630540"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.1135887599761.1104756630540.925888789256"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RemoveReservation",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "confirmCancellation",
+              "type": "YES_NO_SLOT",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.750090469375.657171743075"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.750090469375.657171743075.353638193536"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1545633524831.1347716407493",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What month were you born in?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1545633524831.190084519655",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which day were you born on?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1545633524831.788317813173",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which year were you born on?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1557130119395.748945691173",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "On which day do you want the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1557130119395.748945691173.436708183046",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You can only choose a day within three days from today, choose a valid day"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1557130119395.86111743416",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "At what time do you want the room?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1557130119395.1169189621080",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many seats do you want in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1557130119395.1169189621080.155352733939",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a value greater than zero."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1557130119395.321246766099",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want movables seats?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1557130119395.321246766099.1044154313345",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1557130119395.753557364486",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want an LCD projector in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1557130119395.753557364486.1448043756191",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1557130119395.869425150518",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want a chalk board in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1557130119395.869425150518.1250090186694",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1557130119395.1314722197412",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "For how many hours do you want the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1502469169150.457467705085.1087172656803",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a number greater than zero."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1502469169150.457467705085.1220930956020",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a number upto five."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1502469169150.1419685418296.648895267567",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a valid building number."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.623573378133.86375261890",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In which building do you need the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.623573378133.86375261890.1114288312699",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a valid building number."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.623573378133.1295654479569",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "For how many hours do you want the room ?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.623573378133.1295654479569.1402112402436",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a number greater than zero."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.623573378133.1295654479569.331454872300",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a number upto five."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.623573378133.132068539957",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many seats do you want in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.623573378133.132068539957.705836348083",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a value greater than zero."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.623573378133.359820177834",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want movables seats?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.623573378133.359820177834.577558965031",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.623573378133.1137979886305",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want an LCD projector in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.623573378133.1137979886305.977660722064",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.623573378133.1159988821637",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want a chalk board in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.623573378133.1159988821637.228410074844",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.668508884633.1086146863584",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want to reserve the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.668508884633.1086146863584.1563411035873",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.668508884633.1130474066787.296811541029",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.668508884633.1130474066787",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want to reserve a room?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.667584642950.216358598972",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Would you like to reserve a room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.667584642950.216358598972.1354471728715",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.904213997309.1591941008151",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "in which building do you need the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.904213997309.1591941008151.1050065906326",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a valid building number."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.821914735810.817312539852",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "On which day do you want the room?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.821914735810.35371359914",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "At what time do you want the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.821914735810.817312539852.1087906380239",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You can only choose a day within three days from today, choose a valid day"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.821914735810.573708380260.1508211023839",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a number greater than zero."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.821914735810.573708380260.1538209288981",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a number upto five."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1286544482547.349006420742",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Would you like to reserve a room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1286544482547.349006420742.1527100033832",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1286544482547.789907658609",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In which building do you need the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1286544482547.789907658609.664676336672",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a valid building number."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1286544482547.516971304071.1304837850679",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a number greater than zero."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1286544482547.516971304071",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "For how many hours do you want the room ?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1286544482547.516971304071.437459313547",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a number upto five."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.621583744570.478047933240",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many seats do you want in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.621583744570.478047933240.995299361125",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Choose a value greater than zero."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.621583744570.860862767528",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want movables seats?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.621583744570.860862767528.1063849561281",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.621583744570.676089332356",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want an LCD projector in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.621583744570.676089332356.959497658415",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.621583744570.1582613399690.1462230616540",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.621583744570.1582613399690",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want a chalk board in the room?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1035705105899.501898892350",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Specify your choice?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1135887599761.1576000467717",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want to confirm your choice?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1135887599761.1104756630540",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want to confirm this choice?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1135887599761.1104756630540.925888789256",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1135887599761.1576000467717.1054982283293",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please enter a valid number"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.171756864885.278027064893.410847606083",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please enter a valid time"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.750090469375.657171743075.353638193536",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please say yes or no."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.750090469375.657171743075",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you want to confirm?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.141106832008.190294647177",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In which building do you want the room?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1581398870368.515279972115",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In which building do you want the room?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "334"
+}
