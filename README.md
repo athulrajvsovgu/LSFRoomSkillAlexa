@@ -23,7 +23,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 		<td> 
 		  <p align="center">
             <a href="./docs/room_search_date.md">
-                <img alt="Find room with date" src="./img/1-off._TTH_.png" width="124">
+                <img alt="FindRoomWithDate" src="./img/1-off._TTH_.png" width="124">
                 <br>
                 <em>FindRoomWithDate</em>
             </a>  
@@ -32,7 +32,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 		<td>
 		  <p align="center">
             <a href="./docs/room_search_immediately.md">
-                <img alt="Find room immediately" src="./img/2-off._TTH_.png" width="124">
+                <img alt="FindRoomImmediately" src="./img/2-off._TTH_.png" width="124">
                 <br>
                 <em>FindRoomImmediately</em>
             </a>
@@ -41,7 +41,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 		<td> 
 		  <p align="center">
             <a href="./docs/reserve_room.md">
-                <img alt="Reserve room" src="./img/3-off._TTH_.png" width="124">
+                <img alt="ReserveRoom" src="./img/3-off._TTH_.png" width="124">
                 <br>
                 <em>ReserveRoom</em>
             </a>
@@ -49,8 +49,8 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 		</td>
 		<td> 
 		  <p align="center">
-            <a href="./docs/cancel_reservation.md">
-                <img alt="Cancel reservation" src="./img/4-off._TTH_.png" width="124">
+            <a href="./docs/remove_reservation.md">
+                <img alt="RemoveReservation" src="./img/4-off._TTH_.png" width="124">
                 <br>
                 <em>RemoveReservation</em>
             </a>
@@ -59,7 +59,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
 		<td> 
 		  <p align="center">
             <a href="./docs/">          
-                <img alt="Full Documentation" src="./img/5-off._TTH_.png" width="124">
+                <img alt="FullDocumentation" src="./img/5-off._TTH_.png" width="124">
                 <br>
                 <em>Full Documentation</em>
             </a>
