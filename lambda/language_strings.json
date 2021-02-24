@@ -2,7 +2,7 @@
     "en": {
             "WELCOME_MSG": "Hello! Welcome to LSF Room Service. What can I do for you?",
             "WELCOME_REPROMPT_MSG": "You can say for example, find a free room in building twenty two.",
-            "WELCOME_BACK_MSG": "Welcome back. You have a reservation for the room {} from {} till {}.",
+            "WELCOME_BACK_MSG": "Welcome back. You have a reservation for the room {} from {} till {}. What else can I do for you?",
             "HELP_MSG": "You can tell me find a free room in building 22 or find a free room for today, and I will ask further questions about the room and find suitable rooms for you in the end.",
             "GOODBYE_MSG": "Goodbye!",
             "REFLECTOR_MSG": "You just triggered {}",
@@ -18,9 +18,10 @@
             "RESERVE_PROMPT_MSG": "To reserve a room you can say for example, reserve a room in building twenty nine for two hours.",
             "TRY_AGAIN": "Do you want to try again?",
             "INVALID_OPTION": "Invalid option entry. There are only {} records. You need to enter a value less than or equal to the number of records.",
-            "USER_CANNOT_BOOK": "But you cannot resever a room. A reservation already exist in your name which expires only by {}.",
+            "USER_CANNOT_BOOK": "But you cannot reseve a room. A reservation already exist in your name which expires only by {}.",
             "NO_RESERVATION": "Sorry, you donot have any reservations.",
             "CANCEL_RESERVATION": "Your reservation has been cancelled.",
-            "ERROR_RESERVATION_CANCEL": "There was an error while cancelling your reservation."
+            "ERROR_RESERVATION_CANCEL": "There was an error while cancelling your reservation.",
+            "CONFIRM_CANCELLATION": "Do you want to confirm?"
     }
 }

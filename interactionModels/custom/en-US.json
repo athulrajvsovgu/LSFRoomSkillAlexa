@@ -197,10 +197,7 @@
           "slots": [
             {
               "name": "confirmCancellation",
-              "type": "YES_NO_SLOT",
-              "samples": [
-                "{confirmCancellation}"
-              ]
+              "type": "YES_NO_SLOT"
             }
           ],
           "samples": [
@@ -2120,11 +2117,9 @@
             {
               "name": "confirmCancellation",
               "type": "YES_NO_SLOT",
-              "elicitationRequired": true,
+              "elicitationRequired": false,
               "confirmationRequired": false,
-              "prompts": {
-                "elicitation": "Elicit.Slot.750090469375.657171743075"
-              },
+              "prompts": {},
               "validations": [
                 {
                   "type": "hasEntityResolutionMatch",
@@ -2758,8 +2753,26 @@
             "value": "In which building do you want the room?"
           }
         ]
+      },
+      {
+        "id": "Confirm.Intent.741963184060",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "yes?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.741963184060.1441323270547",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "yes?"
+          }
+        ]
       }
     ]
   },
-  "version": "334"
+  "version": "363"
 }

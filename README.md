@@ -25,7 +25,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
             <a href="./docs/room_search_date.md">
                 <img alt="Find room with date" src="./img/1-off._TTH_.png" width="124">
                 <br>
-                <em>Find room with date</em>
+                <em>Find Room With Date</em>
             </a>  
 		  </p> 
 		</td>
@@ -34,7 +34,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
             <a href="./docs/room_search_immediately.md">
                 <img alt="Find room immediately" src="./img/2-off._TTH_.png" width="124">
                 <br>
-                <em>Find room immediately</em>
+                <em>Find Room Immediately</em>
             </a>
 		  </p> 
 		</td>
@@ -43,7 +43,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
             <a href="./docs/reserve_room.md">
                 <img alt="Reserve room" src="./img/3-off._TTH_.png" width="124">
                 <br>
-                <em>Reserve room</em>
+                <em>Reserve Room</em>
             </a>
 		  </p> 
 		</td>
@@ -52,7 +52,7 @@ The LSF Room Reservation portal looks as below. Options below gives detailed doc
             <a href="./docs/cancel_reservation.md">
                 <img alt="Cancel reservation" src="./img/4-off._TTH_.png" width="124">
                 <br>
-                <em>Cancel reservation</em>
+                <em>Remove Reservation</em>
             </a>
 		  </p>
 		</td>
