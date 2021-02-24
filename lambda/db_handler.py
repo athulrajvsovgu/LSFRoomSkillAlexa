@@ -15,7 +15,7 @@ class ReserveRooms:
     def check_user(self, user):
         flag = False
         try:
-            for dict in self.collection.find():
+            for dict in self.collection.find({},{'_id':0}):
                 if dict['user'] == user:
                     flag = True
                     break
@@ -27,7 +27,7 @@ class ReserveRooms:
     def return_user_info(self, user):
         return_user = 'empty'
         try:
-            for dict in self.collection.find():
+            for dict in self.collection.find({},{'_id':0}):
                 if dict['user'] == user:
                     return_user = dict
                     break
@@ -39,7 +39,7 @@ class ReserveRooms:
     def remove_reservation(self, user):
         flag = False
         try:
-            for dict in self.collection.find():
+            for dict in self.collection.find({},{'_id':0}):
                 if dict['user'] == user:
                     self.collection.remove(dict)
                     flag = True
@@ -54,7 +54,7 @@ class ReserveRooms:
         temp = pd.DataFrame(columns=["user", "room", "start_at", "expire_at"])
         final_result = pd.DataFrame(columns=["user", "room", "start_at", "expire_at"])
         try:
-            for dict in self.collection.find():
+            for dict in self.collection.find({},{'_id':0}):
                 if dict['room'] in rooms['room'].values:
                     common.append(dict['room'])
     

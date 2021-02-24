@@ -99,8 +99,6 @@ class SearchIntent:
                     handler_input.response_builder.set_should_end_session(False)
                 else:
                     check_user_expiry = (self.db).return_user_info(user_id)
-                    logger.info('check_user_expiry')
-                    logger.info(check_user_expiry)
                     say_reserve = data['USER_CANNOT_BOOK'].format(check_user_expiry['expire_at'])
                     speech = speech + "." + "\n" + say_reserve + ' ' + data['GOODBYE_MSG']
                     handler_input.response_builder.set_should_end_session(True)                    

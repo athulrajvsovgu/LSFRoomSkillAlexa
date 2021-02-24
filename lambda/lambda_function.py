@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# This sample demonstrates handling intents from an Alexa skill using the Alexa Skills Kit SDK for Python.
-# Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
-# session persistence, api calls, and more.
-# This sample is built using the handler classes approach in skill builder.
+"""
+This sample demonstrates handling intents from an Alexa skill using the Alexa Skills Kit SDK for Python.
+Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
+session persistence, api calls, and more.
+This sample is built using the handler classes approach in skill builder.
+"""
+
 import logging
 import os
 import json
@@ -31,6 +34,8 @@ from ask_sdk_core.dispatch_components import (AbstractRequestHandler, AbstractEx
     AbstractResponseInterceptor, AbstractRequestInterceptor)
 from ask_sdk_model import (Intent, Response, IntentRequest, DialogState, 
     IntentConfirmationStatus, Slot, SlotConfirmationStatus)
+from ask_sdk_model.slu.entityresolution import (
+    Resolutions,Resolution, ValueWrapper, Value, Status, StatusCode)    
 from ask_sdk_s3.adapter import S3Adapter
 s3_adapter = S3Adapter(bucket_name=os.environ["S3_PERSISTENCE_BUCKET"])
 from pytz import timezone as tz
@@ -51,6 +56,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
         user_id = str(user_id)
         db = ReserveRooms()
         check_user_expiry = db.return_user_info(user_id)
+        handler_input.attributes_manager.session_attributes["check_user_expiry"] = check_user_expiry
         if (check_user_expiry == 'empty') or (check_user_expiry == 'error'):
             speech = data["WELCOME_MSG"]
         else:
@@ -83,8 +89,8 @@ class RoomSearchIntentHandler(AbstractRequestHandler):
         duration = slots["duration"].value
         seats = slots["seats"].value
 
-        # if the interaction models uses synonyms  the following logic will return the ID for the value
-        try: 
+        # if the interaction models uses synonyms the following logic will return the ID for the value
+        try:
             movable_seats = slots["movableSeats"].resolutions.resolutions_per_authority[0].values[0].value.id
             projector = slots["projector"].resolutions.resolutions_per_authority[0].values[0].value.id
             chalkboard = slots["chalkboard"].resolutions.resolutions_per_authority[0].values[0].value.id
@@ -94,7 +100,7 @@ class RoomSearchIntentHandler(AbstractRequestHandler):
 
         if slots["buildingNumber"].value:
             building = slots["buildingNumber"].value
-            building = int(building)
+            building = int(building)   
         
         commons = SearchIntent()   
         speech = commons.search_execution(handler_input, data, user_id, date, time, building, duration, seats, movable_seats, projector, chalkboard)
@@ -131,7 +137,7 @@ class RoomSearchNowIntentHandler(AbstractRequestHandler):
         duration = slots["duration"].value
         seats = slots["seats"].value
 
-        # if the interaction models uses synonyms  the following logic will return the ID for the value
+        # if the interaction models uses synonyms the following logic will return the ID for the value
         try: 
             movable_seats = slots["movableSeats"].resolutions.resolutions_per_authority[0].values[0].value.id
             projector = slots["projector"].resolutions.resolutions_per_authority[0].values[0].value.id
@@ -187,30 +193,24 @@ class RemoveReservationIntentHandler(AbstractRequestHandler):
         return is_intent_name("RemoveReservation")(handler_input)
     
     def handle(self, handler_input):
+        session_attr = handler_input.attributes_manager.session_attributes
         data = handler_input.attributes_manager.request_attributes["_"]
-        slots = handler_input.request_envelope.request.intent.slots
         skill_locale = handler_input.request_envelope.request.locale
+        slots = handler_input.request_envelope.request.intent.slots
         user_id = handler_input.request_envelope.context.system.user.user_id   
-        user_id = str(user_id)        
-        # if the interaction models uses synonyms the following logic will return the ID for the value
-        try:
-            confirm_cancellation = slots["confirmCancellation"].resolutions.resolutions_per_authority[0].values[0].value.id
-        except:
-        # if the above fails, it means that there are no synonyms being used, so retrieve the value for the month in the regular way
-            pass
+        user_id = str(user_id)
         
-        if confirm_cancellation == 'TRUE':
-            db = ReserveRooms()
-            confirmation = db.remove_reservation(user_id)
-            if not confirmation:
-                speech = data["NO_RESERVATION"]
-            elif confirmation == 'error':
-                speech = data["ERROR_RESERVATION_CANCEL"]
-            else:
-                speech = data["CANCEL_RESERVATION"]
+        if (session_attr["check_user_expiry"] == 'empty') or (session_attr["check_user_expiry"] == 'error'):
+            logger.info("speech")
+            speech = data["NO_RESERVATION"]
+            logger.info(speech)
+            handler_input.response_builder.set_should_end_session(True)
+            return handler_input.response_builder.speak(speech).response
         else:
-            speech = data["GOODBYE_MSG"]
-        return handler_input.response_builder.speak(speech).response        
+            speech = data["CONFIRM_CANCELLATION"]
+            handler_input.attributes_manager.session_attributes["intent"] = "RemoveReservation"
+            handler_input.response_builder.set_should_end_session(False)
+            return handler_input.response_builder.speak(speech).response        
 
 
 class YesHandler(AbstractRequestHandler):
@@ -224,14 +224,28 @@ class YesHandler(AbstractRequestHandler):
         data = handler_input.attributes_manager.request_attributes["_"]
         session_attr = handler_input.attributes_manager.session_attributes
         skill_locale = handler_input.request_envelope.request.locale
+        user_id = handler_input.request_envelope.context.system.user.user_id   
+        user_id = str(user_id)
+        intent = session_attr["intent"]
         
-        if session_attr["intent"] == "SearchIntent":
+        if intent == "SearchIntent":
             handler_input.response_builder.set_should_end_session(False)
             return handler_input.response_builder.add_directive(
                 DelegateDirective(updated_intent="ReserveRoom")).response
-        else:
-            speak_output = data["GOODBYE_MSG"]
-            handler_input.response_builder.speak(speak_output)
+        elif intent == "RemoveReservation":
+            db = ReserveRooms()
+            confirmation = db.remove_reservation(user_id)
+            if not confirmation:
+                speech = data["NO_RESERVATION"]
+            elif confirmation == 'error':
+                speech = data["ERROR_RESERVATION_CANCEL"]
+            else:
+                speech = data["CANCEL_RESERVATION"]
+            handler_input.response_builder.set_should_end_session(True)
+            return handler_input.response_builder.speak(speech).response
+        else:    
+            speech = data["GOODBYE_MSG"]
+            handler_input.response_builder.speak(speech)
             handler_input.response_builder.set_should_end_session(True)
             return handler_input.response_builder.response
             
