@@ -107,7 +107,7 @@ class RoomSearchIntentHandler(AbstractRequestHandler):
 
         if slots["buildingNumber"].value:
             building = slots["buildingNumber"].value
-            building = int(building)   
+            building = int(building)
         
         check_date = datetime.strptime(date,'%Y-%m-%d')
         if(check_date.isoweekday() == 7):
@@ -115,7 +115,14 @@ class RoomSearchIntentHandler(AbstractRequestHandler):
             add_speech = "Since its not possible to reserve room on Sunday, the search was done for Monday same time."
             date = datetime.strftime(check_date,'%Y-%m-%d')
         else:
-            add_speech = "default"
+            check_time = datetime.now().time()
+            entered_time = datetime.strptime(time,'%H:%M').time()
+            if entered_time < check_time:
+                handler_input.attributes_manager.session_attributes["intent"] = "FindRoomWithDate"
+                handler_input.response_builder.set_should_end_session(False)
+                return   handler_input.response_builder.speak(data["TIME_EXPIRED"]).response
+            else:
+                add_speech = "default"
         
         commons = SearchIntent()   
         speech = commons.search_execution(handler_input, data, user_id, date, time, building, duration, seats, movable_seats, projector, chalkboard, add_speech)
@@ -288,6 +295,11 @@ class YesHandler(AbstractRequestHandler):
             handler_input.response_builder.set_should_end_session(False)
             return handler_input.response_builder.add_directive(
                 DelegateDirective(updated_intent="ReserveRoom")).response
+        
+        elif intent == "FindRoomWithDate":
+            handler_input.response_builder.set_should_end_session(False)
+            return handler_input.response_builder.add_directive(
+                DelegateDirective(updated_intent="FindRoomWithDate")).response    
         
         elif intent == "Alternate_1_search":
             try:

@@ -51,27 +51,3 @@ The following table gives detailed description of various slots used in this par
 **Note:** A custom slot '***YES_NO_SLOT***' has been used in this skill:-
 * *Accepts the synonyms of 'Yes' and 'No' as inputs produces boolean output*
 * *To get more idea on various slot type please refer the documentation - [**Slot Type Reference**](https://developer.amazon.com/en-US/docs/alexa/custom-skills/slot-type-reference.html)*
-
-<div class="table-wrap">
-	<table class="wrapped confluenceTable tablesorter tablesorter-default stickyTableHeaders" role="grid">
-		<colgroup><col><col><col><col></colgroup>
-			<thead class="tableFloatingHeader">
-				<tr role="row" class="tablesorter-headerRow">
-					<th align="center" class="cTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="0" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Name: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner"><p>Slot Name</p></div></th>
-					<th align="center" class="cTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="1" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Address: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner"><p>Slot Type</p></div></th>
-					<th align="center" class="cTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="2" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Input: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner"><p>Description</p></div></th>
-					<th align="center" class="cTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Output: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner"><p>Sample Prompts</p></div></th>
-					<th align="center" class="cTh tablesorter-header sortableHeader tablesorter-headerUnSorted" data-column="3" tabindex="0" scope="col" role="columnheader" aria-disabled="false" unselectable="on" aria-sort="none" aria-label="Output: No sort applied, activate to apply an ascending sort"><div class="tablesorter-header-inner"><p>Sample Utterances</p></div></th>
-				</tr>
-			</thead>
-			<tbody aria-live="polite" aria-relevant="all">
-				<tr role="row">
-					<td class="cTd"><p>confirmCancellation</p></td>
-					<td class="cTd"><p>YES_NO_SLOT</p></td>
-					<td class="cTd"><p>Confirmation for cancelling the reservation</p></td>
-					<td class="cTd"><p>Do you want to confirm?</p></td>
-					<td class="cTd"><p>{confirmCancellation}</p></td>
-				</tr>		
-			</tbody>
-		</table>
-	</div>
