@@ -2,7 +2,7 @@
 
 This intent enables the user to drop the reserved room. It is to be noted that a user is only able to make a single reservation. Therefore this intent cancel the only existing reservation for a user.
 
-There is only a single and mandatory slot '**confirmCancellation**' for this intent. If the response is a 'Yes' then it drops the only reservation.
+There is no slot for this intent. It prompts the user for confirmation to cancel the room reservation. If the user responds with a 'Yes' then it drops the only reservation.
 
 Slots convert the user utterances into data such as numbers and dates. There are various types of slots:-
 

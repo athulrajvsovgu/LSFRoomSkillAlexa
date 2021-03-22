@@ -73,6 +73,13 @@ class RoomSearchIntentHandler(AbstractRequestHandler):
     """
     Handler for Searching Room
     """
+        #round off time to nearest hour
+    def round_time(self, time_now):
+        if time_now.minute >= 1:
+            return time_now.replace(second=0, microsecond=0, minute=0, hour=time_now.hour+1)
+        else:
+            return time_now.replace(second=0, microsecond=0, minute=0, hour=time_now.hour)
+            
     def can_handle(self, handler_input):
         return is_intent_name("FindRoomWithDate")(handler_input)
 
@@ -102,11 +109,19 @@ class RoomSearchIntentHandler(AbstractRequestHandler):
             building = slots["buildingNumber"].value
             building = int(building)   
         
-        commons = SearchIntent()   
-        speech = commons.search_execution(handler_input, data, user_id, date, time, building, duration, seats, movable_seats, projector, chalkboard)
-        return handler_input.response_builder.speak(speech).response    
-
+        check_date = datetime.strptime(date,'%Y-%m-%d')
+        if(check_date.isoweekday() == 7):
+            check_date = check_date + timedelta(days=1)
+            add_speech = "Since its not possible to reserve room on Sunday, the search was done for Monday same time."
+            date = datetime.strftime(check_date,'%Y-%m-%d')
+        else:
+            add_speech = "default"
         
+        commons = SearchIntent()   
+        speech = commons.search_execution(handler_input, data, user_id, date, time, building, duration, seats, movable_seats, projector, chalkboard, add_speech)
+        return handler_input.response_builder.speak(speech).response
+        
+
 class RoomSearchNowIntentHandler(AbstractRequestHandler):
     """
     Handler for Searching Room
@@ -114,17 +129,48 @@ class RoomSearchNowIntentHandler(AbstractRequestHandler):
     #round off time to nearest hour
     def round_time(self, time_now):
         if time_now.minute >= 1:
-            return time_now.replace(second=0, microsecond=0, minute=0, hour=time_now.hour+2)
-        else:
             return time_now.replace(second=0, microsecond=0, minute=0, hour=time_now.hour+1)
+        else:
+            return time_now.replace(second=0, microsecond=0, minute=0, hour=time_now.hour)
 
-    def date_format_convert(self, data):
-        date_converted = data.strftime("%Y-%m-%d %H:%M:%S.%f")
-        date_converted = datetime.strptime(date_converted,'%Y-%m-%d %H:%M:%S.%f')
-        return date_converted
+    def return_date_time(self, check):
+        start_low = datetime(1900, 1, 1, 0, 0).time()
+        start_high = datetime(1900, 1, 1, 8, 0).time()
+        end_low = datetime(1900, 1, 1, 20, 0).time()
+        end_high = datetime(1900, 1, 1, 23, 59).time()
+        
+        if start_low < check.time() < start_high:
+            if(check.isoweekday() == 7):
+                date = check + timedelta(days=1)
+                add_speech = "Since its not possible to reserve room on Sunday, the search was done for Monday 8:00 a.m."
+            else: 
+                date = check
+                add_speech = "Since its not possible to reserve room now, the search was done for 8:00 a.m."
+            time = "08:00"
+            
+        elif end_low < check.time() < end_high:
+            date = check + timedelta(days=1)
+            if(date.isoweekday() == 7):
+                date = check + timedelta(days=1)
+                add_speech = "Since its not possible to reserve room now and Sunday, the search was done for next day 8:00 a.m."
+            else:
+                add_speech = "Since its not possible to reserve room now, the search was done for next day 8:00 a.m."
+            time = "08:00"
+            
+        elif start_high < check.time() < end_low:
+            if(check.isoweekday() == 7):
+                date = check + timedelta(days=1)
+                add_speech = "Since its not possible to reserve room on Sunday, the search was done for Monday same time."
+            else:
+                date = check
+                add_speech = "default"
+            time = datetime.strftime(self.round_time(date),'%H:%M')
+    
+        date = datetime.strftime(date,'%Y-%m-%d')
+        return date, time, add_speech
 
     def can_handle(self, handler_input):
-        return is_intent_name("FindRoomImmediately")(handler_input)
+            return is_intent_name("FindRoomImmediately")(handler_input)
         
     def handle(self, handler_input):
         data = handler_input.attributes_manager.request_attributes["_"]
@@ -150,13 +196,10 @@ class RoomSearchNowIntentHandler(AbstractRequestHandler):
             building = slots["buildingNumber"].value
             building = int(building)        
 
-        date = datetime.now()
-        time = self.round_time(date)
-        date = datetime.strftime(date,'%Y-%m-%d')
-        time = datetime.strftime(time,'%H:%M')
+        date, time, add_speech = self.return_date_time(datetime.now())
         
-        commons = SearchIntent()   
-        speech = commons.search_execution(handler_input, data, user_id, date, time, building, duration, seats, movable_seats, projector, chalkboard)
+        commons = SearchIntent()
+        speech = commons.search_execution(handler_input, data, user_id, date, time, building, duration, seats, movable_seats, projector, chalkboard, add_speech)
         return handler_input.response_builder.speak(speech).response 
         
 
@@ -200,7 +243,13 @@ class RemoveReservationIntentHandler(AbstractRequestHandler):
         user_id = handler_input.request_envelope.context.system.user.user_id   
         user_id = str(user_id)
         
-        if (session_attr["check_user_expiry"] == 'empty') or (session_attr["check_user_expiry"] == 'error'):
+        try:
+            check_user_expiry = session_attr["check_user_expiry"]
+        except:
+            db = ReserveRooms()
+            check_user_expiry = db.return_user_info(user_id)
+        
+        if (check_user_expiry == 'empty') or (check_user_expiry == 'error'):
             logger.info("speech")
             speech = data["NO_RESERVATION"]
             logger.info(speech)
@@ -224,14 +273,99 @@ class YesHandler(AbstractRequestHandler):
         data = handler_input.attributes_manager.request_attributes["_"]
         session_attr = handler_input.attributes_manager.session_attributes
         skill_locale = handler_input.request_envelope.request.locale
-        user_id = handler_input.request_envelope.context.system.user.user_id   
-        user_id = str(user_id)
-        intent = session_attr["intent"]
+        user_id = handler_input.request_envelope.context.system.user.user_id
+        commons = SearchIntent()
         
-        if intent == "SearchIntent":
+        user_id = str(user_id)
+        try:
+            intent = session_attr["intent"]
+        except:
+            intent = ""
+                    
+        if (intent == "SearchIntent") or (intent == "Alternate_1_reserve") or (intent == "Alternate_2_reserve") or (intent == "Alternate_3_reserve"):
+            logger.info("Yes intent reserve")
+            logger.info(intent)
             handler_input.response_builder.set_should_end_session(False)
             return handler_input.response_builder.add_directive(
                 DelegateDirective(updated_intent="ReserveRoom")).response
+        
+        elif intent == "Alternate_1_search":
+            try:
+                response_2 = session_attr["response_2"]
+                result_2 = session_attr["result_2"]
+                response_2 = response_2 + ' ' + commons.reserve_alternate(data, handler_input, result_2, user_id, "Alternate_2")
+                handler_input.response_builder.set_should_end_session(False)
+                logger.info("Alternate_1_search_response_2")
+                return handler_input.response_builder.speak(response_2).response
+            except:
+                try:
+                    response_3 = session_attr["response_3"]
+                    result_3 = session_attr["result_3"]
+                    response_3 = response_3 + ' ' + commons.reserve_alternate(data, handler_input, result_3, user_id, "Alternate_3")
+                    handler_input.response_builder.set_should_end_session(False)
+                    logger.info("Alternate_1_search_response_3")
+                    return handler_input.response_builder.speak(response_3).response
+                except:
+                    speech = data['NO_MORE_ALTERNATE_MSG'] + ' ' + data['NEW_SEARCH']
+                    handler_input.response_builder.set_should_end_session(True)
+                    logger.info("Alternate_1_search_exception")
+                    return handler_input.response_builder.speak(speech).response
+        
+        elif intent == "Alternate_2_search":
+            try:
+                response_3 = session_attr["response_3"]
+                result_3 = session_attr["result_3"]
+                response_3 = response_3 + ' ' + commons.reserve_alternate(data, handler_input, result_3, user_id, "Alternate_3")
+                handler_input.response_builder.set_should_end_session(False)
+                logger.info("Alternate_2_search_response_3")
+                return handler_input.response_builder.speak(response_3).response
+            except:
+                speech = data["NO_MORE_ALTERNATE_MSG"] + ' ' + data['NEW_SEARCH']
+                handler_input.response_builder.set_should_end_session(True)
+                logger.info("Alternate_2_search_exception")
+                return handler_input.response_builder.speak(speech).response
+        
+        elif intent == "Alternate_3_search":
+            speech = data["NO_MORE_ALTERNATE_MSG"] + ' ' + data['NEW_SEARCH']
+            handler_input.response_builder.set_should_end_session(True)
+            logger.info("Alternate_3_search_exception")
+            return handler_input.response_builder.speak(speech).response
+            
+        elif intent == "FindRoomWithDate":
+            handler_input.response_builder.set_should_end_session(False)
+            return handler_input.response_builder.add_directive(
+                DelegateDirective(updated_intent="FindRoomWithDate")).response
+            
+        elif intent == "SearchIntentAlternative":
+            try:
+                response_1 = session_attr["response_1"]
+                result_1 = session_attr["result_1"]
+                response_1 = response_1 + ' ' + commons.reserve_alternate(data, handler_input, result_1, user_id, "Alternate_1")
+                handler_input.response_builder.set_should_end_session(False)
+                logger.info("SearchIntentAlternative_response_1")
+                return handler_input.response_builder.speak(response_1).response                
+            except:
+                try:
+                    response_2 = session_attr["response_2"]
+                    result_2 = session_attr["result_2"]
+                    response_2 = response_2 + ' ' + commons.reserve_alternate(data, handler_input, result_2, user_id, "Alternate_2")
+                    handler_input.response_builder.set_should_end_session(False)
+                    logger.info("SearchIntentAlternative_response_2")
+                    return handler_input.response_builder.speak(response_2).response
+                except:
+                    try:
+                        response_3 = session_attr["response_3"]
+                        result_3 = session_attr["result_3"]
+                        response_3 = response_3 + ' ' + commons.reserve_alternate(data, handler_input, result_3, user_id, "Alternate_3")
+                        handler_input.response_builder.set_should_end_session(False)
+                        logger.info("SearchIntentAlternative_response_3")
+                        return handler_input.response_builder.speak(response_3).response
+                    except:
+                        speech = data["NO_MORE_ALTERNATE_MSG"]
+                        handler_input.response_builder.set_should_end_session(True)
+                        logger.info("SearchIntentAlternative_exception")
+                        return handler_input.response_builder.speak(speech).response
+                
         elif intent == "RemoveReservation":
             db = ReserveRooms()
             confirmation = db.remove_reservation(user_id)
@@ -243,11 +377,13 @@ class YesHandler(AbstractRequestHandler):
                 speech = data["CANCEL_RESERVATION"]
             handler_input.response_builder.set_should_end_session(True)
             return handler_input.response_builder.speak(speech).response
-        else:    
+            
+        else:
+            logger.info("Yes intent goodbye")
+            logger.info(intent)
             speech = data["GOODBYE_MSG"]
-            handler_input.response_builder.speak(speech)
             handler_input.response_builder.set_should_end_session(True)
-            return handler_input.response_builder.response
+            return handler_input.response_builder.speak(speech).response
             
 
 class NoHandler(AbstractRequestHandler):
@@ -260,13 +396,67 @@ class NoHandler(AbstractRequestHandler):
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
         data = handler_input.attributes_manager.request_attributes["_"]
-        speak_output = data["GOODBYE_MSG"]
-        handler_input.response_builder.set_should_end_session(True)
-        return (
-            handler_input.response_builder
-                .speak(speak_output)
-                .response
-        )
+        session_attr = handler_input.attributes_manager.session_attributes
+        skill_locale = handler_input.request_envelope.request.locale
+        user_id = handler_input.request_envelope.context.system.user.user_id
+        commons = SearchIntent()
+        
+        user_id = str(user_id)
+        try:
+            intent = session_attr["intent"]
+        except:
+            intent = ""
+        
+        if intent == "Alternate_1_reserve":
+            logger.info("Alternate_1_reserve")
+            try:
+                response_2 = session_attr["response_2"]
+                result_2 = session_attr["result_2"]
+                response_2 = response_2 + ' ' + commons.reserve_alternate(data, handler_input, result_2, user_id, "Alternate_2")
+                handler_input.response_builder.set_should_end_session(False)
+                logger.info("Alternate_1_reserve_response_2")
+                return handler_input.response_builder.speak(response_2).response                
+            except:
+                try:
+                    response_3 = session_attr["response_3"]
+                    result_3 = session_attr["result_3"]
+                    response_3 = response_3 + ' ' + commons.reserve_alternate(data, handler_input, result_3, user_id, "Alternate_3")
+                    handler_input.response_builder.set_should_end_session(False)
+                    logger.info("Alternate_1_reserve_response_3")
+                    return handler_input.response_builder.speak(response_3).response
+                except:
+                    speech = data['NO_MORE_ALTERNATE_MSG'] + ' ' + data['NEW_SEARCH']
+                    handler_input.response_builder.set_should_end_session(True)
+                    logger.info("Alternate_1_reserve_exception")
+                    return handler_input.response_builder.speak(speech).response
+        
+        elif intent == "Alternate_2_reserve":
+            try:
+                logger.info("Alternate_2_reserve")
+                response_3 = session_attr["response_3"]
+                result_3 = session_attr["result_3"]
+                response_3 = response_3 + ' ' + commons.check_reserve_possible(data, handler_input, result_3, user_id, "Alternate_3")
+                handler_input.response_builder.set_should_end_session(False)
+                logger.info("Alternate_1_reserve_response_3")
+                return handler_input.response_builder.speak(response_3).response
+            except:
+                speech = data["NO_MORE_ALTERNATE_MSG"] + ' ' + data['NEW_SEARCH']
+                handler_input.response_builder.set_should_end_session(True)
+                logger.info("Alternate_2_reserve_exception")
+                return handler_input.response_builder.speak(speech).response
+        
+        elif intent == "Alternate_3_reserve":
+            speech = data["NO_MORE_ALTERNATE_MSG"] + ' ' + data['NEW_SEARCH']
+            handler_input.response_builder.set_should_end_session(True)
+            logger.info("Alternate_3_reserve")
+            return handler_input.response_builder.speak(speech).response
+        
+        else:
+            logger.info("No intent goodbye")
+            logger.info(intent)
+            speech = data["GOODBYE_MSG"]
+            handler_input.response_builder.set_should_end_session(True)
+            return handler_input.response_builder.speak(speech).response
         
 
 class HelpIntentHandler(AbstractRequestHandler):
@@ -302,7 +492,17 @@ class CancelOrStopIntentHandler(AbstractRequestHandler):
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
         data = handler_input.attributes_manager.request_attributes["_"]
-        speak_output = data["GOODBYE_MSG"]
+        session_attr = handler_input.attributes_manager.session_attributes
+        
+        try:
+            intent = session_attr["intent"]
+        except:
+            intent = ""
+            
+        if intent == "FindRoomImmediately":
+            speak_output = data["TIME_ISSUE"] + " " + data["GOODBYE_MSG"]
+        else:    
+            speak_output = data["GOODBYE_MSG"]
 
         return (
             handler_input.response_builder
@@ -322,7 +522,9 @@ class SessionEndedRequestHandler(AbstractRequestHandler):
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
         # Any cleanup logic goes here.
-        return handler_input.response_builder.response
+        data = handler_input.attributes_manager.request_attributes["_"]
+        speak_output = data["TIMEOUT_MSG"] + ' ' + data["NEW_SEARCH"]
+        return handler_input.response_builder.speak(speak_output).response
 
 
 class IntentReflectorHandler(AbstractRequestHandler):

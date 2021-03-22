@@ -1,47 +1,65 @@
 {
   "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "This Alexa skill is to manage rooms through the LSF Portal.",
+          "examplePhrases": [
+            "Alexa, ask l. s. f. room service to find a free room in building twenty nine for monday at ten o\u0027clock  for two  hours",
+            "Alexa, ask l. s. f. room service to Find a free room now in building twenty nine",
+            "Alexa, ask l. s. f. room service to cancel my reservation"
+          ],
+          "keywords": [],
+          "name": "LSF Room Service",
+          "description": "This Alexa skill is to manage rooms through the LSF Portal. The skill prompts the user for necessary inputs and provides appropriate results. This skill has the following capabilities:-\n* Search and reserve a room on specified date and time\n* Search and reserve a room immediately\n* Cancel reservations\n* Welcome back message with reservation details for the user if any exist\n\nTo invoke the skill say \u0027open LSF Room Service\u0027. This launches the skill and looks for various utterances to launch various intents. To work with the skill:-\n* For eg. say \u0027find a free room in building twenty nine\u0027.\n* Then it will prompt to collect all the mandatory slot values.\n* It retrieves the slot values and uses it to compute the results.\n* It also prompts the user to for valid input entry in case of invalid entry. For eg. for a number slot type if a string is entered it prompts the user until a number is entered.\n* After computing the results, its converted to voice response and is fed to the user.\n\u0027Note\u0027: A user will only able to make a single reservation.",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "sourceLocaleForLanguages": [
+          {
+            "sourceLocale": "en-US",
+            "language": "en"
+          }
+        ],
+        "isActive": true
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": []
+    },
     "apis": {
       "custom": {
         "endpoint": {
           "uri": "arn:aws:lambda:us-east-1:286176388764:function:be69093f-9058-4a29-a46d-bdb49a41ce1f:Release_0"
         },
-        "interfaces": []
+        "interfaces": [],
+        "regions": {
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:286176388764:function:be69093f-9058-4a29-a46d-bdb49a41ce1f:Release_0"
+            }
+          }
+        }
       }
     },
     "manifestVersion": "1.0",
-    "permissions": [
-      {
-        "name": "alexa::devices:all:address:full:read"
-      },
-      {
-        "name": "alexa::profile:name:read"
-      },
-      {
-        "name": "alexa::profile:email:read"
-      },
-      {
-        "name": "alexa::profile:mobile_number:read"
-      },
-      {
-        "name": "alexa::household:lists:read"
-      },
-      {
-        "name": "alexa::household:lists:write"
-      },
-      {
-        "name": "alexa::devices:all:geolocation:read"
-      }
-    ],
-    "publishingInformation": {
-      "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": [],
-      "isAvailableWorldwide": true,
+    "permissions": [],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
       "locales": {
         "en-US": {
-          "name": "LSF Room Service"
+          "termsOfUseUrl": "https://github.com/athulrajvsovgu/LSFRoomSkillAlexa",
+          "privacyPolicyUrl": ""
         }
       },
-      "testingInstructions": "Sample Testing Instructions."
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
     }
   }
 }
