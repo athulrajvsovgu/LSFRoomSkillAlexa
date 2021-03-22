@@ -115,12 +115,12 @@ class RoomSearchIntentHandler(AbstractRequestHandler):
             add_speech = "Since its not possible to reserve room on Sunday, the search was done for Monday same time."
             date = datetime.strftime(check_date,'%Y-%m-%d')
         else:
-            check_time = datetime.now().time()
-            entered_time = datetime.strptime(time,'%H:%M').time()
-            if entered_time < check_time:
+            entered_time = date + ' ' + time + ':00'
+            entered_time = datetime.strptime(entered_time, '%Y-%m-%d %H:%M:%S')
+            if entered_time < datetime.now():
                 handler_input.attributes_manager.session_attributes["intent"] = "FindRoomWithDate"
                 handler_input.response_builder.set_should_end_session(False)
-                return   handler_input.response_builder.speak(data["TIME_EXPIRED"]).response
+                return handler_input.response_builder.speak(data["TIME_EXPIRED"]).response
             else:
                 add_speech = "default"
         
