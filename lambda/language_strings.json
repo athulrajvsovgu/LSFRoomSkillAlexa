@@ -45,6 +45,7 @@
             "ALT_RESULTS_MSG" : "They are: ",
             "NEW_SEARCH": "Please consider doing a fresh search. Bye!",
             "TIMEOUT_MSG": "Sorry! The skill took too much time to respond.",
-            "TIME_ISSUE": "You cannot book a room at this time. Please try booking the room between eight a.m and eight p.m."
+            "TIME_ISSUE": "You cannot book a room at this time. Please try booking the room between eight a.m and eight p.m.",
+            "TIME_EXPIRED": "The entered time has expired. You need to try again from the beginning. Please say Yes or No if you want to start a new search."
     }
 }
