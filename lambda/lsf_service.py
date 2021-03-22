@@ -37,6 +37,8 @@ class LsfService:
         if building in self.params['buildings_num']:
             building = self.params['buildings_num'][building]
             query_data['building'] = building
+        elif building is None:
+            query_data['building'] = ''
         else:
             return None
 

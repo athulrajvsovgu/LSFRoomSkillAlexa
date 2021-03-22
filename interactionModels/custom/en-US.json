@@ -194,13 +194,12 @@
         },
         {
           "name": "RemoveReservation",
-          "slots": [
-            {
-              "name": "confirmCancellation",
-              "type": "YES_NO_SLOT"
-            }
-          ],
+          "slots": [],
           "samples": [
+            "drop my reservation",
+            "remove my reservation",
+            "delete my reservation",
+            "cancel my reservation",
             "I want to cancel my reservation",
             "I would like to cancel my reservation",
             "I want to drop my reservation",
@@ -249,6 +248,8 @@
               "name": {
                 "value": "1",
                 "synonyms": [
+                  "1st",
+                  "1",
                   "ONE",
                   "one",
                   "One",
@@ -263,6 +264,8 @@
               "name": {
                 "value": "2",
                 "synonyms": [
+                  "2nd",
+                  "2",
                   "TWO",
                   "two",
                   "Two",
@@ -277,6 +280,8 @@
               "name": {
                 "value": "3",
                 "synonyms": [
+                  "3rd",
+                  "3",
                   "THREE",
                   "three",
                   "Three",
@@ -291,6 +296,8 @@
               "name": {
                 "value": "4",
                 "synonyms": [
+                  "4th",
+                  "4",
                   "FOUR",
                   "four",
                   "Four",
@@ -305,6 +312,8 @@
               "name": {
                 "value": "5",
                 "synonyms": [
+                  "5th",
+                  "5",
                   "FIVE",
                   "five",
                   "Five",
@@ -319,6 +328,8 @@
               "name": {
                 "value": "6",
                 "synonyms": [
+                  "6th",
+                  "6",
                   "SIX",
                   "six",
                   "Six",
@@ -333,6 +344,8 @@
               "name": {
                 "value": "7",
                 "synonyms": [
+                  "7th",
+                  "7",
                   "SEVEN",
                   "seven",
                   "Seven",
@@ -347,6 +360,8 @@
               "name": {
                 "value": "8",
                 "synonyms": [
+                  "8th",
+                  "8",
                   "EIGHT",
                   "eight",
                   "Eight",
@@ -361,6 +376,8 @@
               "name": {
                 "value": "9",
                 "synonyms": [
+                  "9th",
+                  "9",
                   "NINE",
                   "nine",
                   "Nine",
@@ -375,6 +392,8 @@
               "name": {
                 "value": "10",
                 "synonyms": [
+                  "10th",
+                  "10",
                   "TEN",
                   "ten",
                   "Ten",
@@ -389,6 +408,8 @@
               "name": {
                 "value": "11",
                 "synonyms": [
+                  "11th",
+                  "11",
                   "ELEVEN",
                   "eleven",
                   "Eleven",
@@ -403,6 +424,8 @@
               "name": {
                 "value": "12",
                 "synonyms": [
+                  "12th",
+                  "12",
                   "TWELVE",
                   "twelve",
                   "Twelve",
@@ -417,6 +440,8 @@
               "name": {
                 "value": "13",
                 "synonyms": [
+                  "13th",
+                  "13",
                   "THIRTEEN",
                   "thirteen",
                   "Thirteen",
@@ -431,6 +456,8 @@
               "name": {
                 "value": "14",
                 "synonyms": [
+                  "14th",
+                  "14",
                   "FOURTEEN",
                   "fourteen",
                   "Fourteen",
@@ -445,6 +472,8 @@
               "name": {
                 "value": "15",
                 "synonyms": [
+                  "15th",
+                  "15",
                   "FIFTEEN",
                   "fifteen",
                   "Fifteen",
@@ -459,6 +488,8 @@
               "name": {
                 "value": "16",
                 "synonyms": [
+                  "16th",
+                  "16",
                   "SIXTEEN",
                   "sixteen",
                   "Sixteen",
@@ -473,6 +504,8 @@
               "name": {
                 "value": "17",
                 "synonyms": [
+                  "17th",
+                  "17",
                   "SEVENTEEN",
                   "seventeen",
                   "Seventeen",
@@ -487,6 +520,8 @@
               "name": {
                 "value": "18",
                 "synonyms": [
+                  "18th",
+                  "18",
                   "EIGHTEEN",
                   "eighteen",
                   "Eighteen",
@@ -501,6 +536,8 @@
               "name": {
                 "value": "19",
                 "synonyms": [
+                  "19th",
+                  "19",
                   "NINETEEN",
                   "nineteen",
                   "Nineteen",
@@ -515,6 +552,8 @@
               "name": {
                 "value": "20",
                 "synonyms": [
+                  "20th",
+                  "20",
                   "TWENTY",
                   "twenty",
                   "Twenty",
@@ -529,6 +568,8 @@
               "name": {
                 "value": "21",
                 "synonyms": [
+                  "21st",
+                  "21",
                   "TWENTY ONE",
                   "twenty one",
                   "Twenty One",
@@ -543,6 +584,8 @@
               "name": {
                 "value": "22",
                 "synonyms": [
+                  "22nd",
+                  "22",
                   "TWENTY TWO",
                   "twenty two",
                   "Twenty Two",
@@ -557,6 +600,8 @@
               "name": {
                 "value": "23",
                 "synonyms": [
+                  "23rd",
+                  "23",
                   "TWENTY THREE",
                   "twenty three",
                   "Twenty Three",
@@ -571,6 +616,8 @@
               "name": {
                 "value": "24",
                 "synonyms": [
+                  "24th",
+                  "24",
                   "TWENTY FOUR",
                   "twenty four",
                   "Twenty Four",
@@ -585,6 +632,8 @@
               "name": {
                 "value": "25",
                 "synonyms": [
+                  "25th",
+                  "25",
                   "TWENTY FIVE",
                   "twenty five",
                   "Twenty Five",
@@ -599,6 +648,8 @@
               "name": {
                 "value": "26",
                 "synonyms": [
+                  "26th",
+                  "26",
                   "TWENTY SIX",
                   "twenty six",
                   "Twenty Six",
@@ -613,6 +664,8 @@
               "name": {
                 "value": "27",
                 "synonyms": [
+                  "27th",
+                  "27",
                   "TWENTY SEVEN",
                   "twenty seven",
                   "Twenty Seven",
@@ -627,6 +680,8 @@
               "name": {
                 "value": "28",
                 "synonyms": [
+                  "28th",
+                  "28",
                   "TWENTY EIGHT",
                   "twenty eight",
                   "Twenty Eight",
@@ -641,6 +696,8 @@
               "name": {
                 "value": "29",
                 "synonyms": [
+                  "29th",
+                  "29",
                   "TWENTY NINE",
                   "twenty nine",
                   "Twenty Nine",
@@ -655,6 +712,8 @@
               "name": {
                 "value": "30",
                 "synonyms": [
+                  "30th",
+                  "30",
                   "THIRTY",
                   "thirty",
                   "Thirty",
@@ -669,6 +728,8 @@
               "name": {
                 "value": "31",
                 "synonyms": [
+                  "31",
+                  "31st",
                   "THIRTY ONE",
                   "thirty one",
                   "Thirty One",
@@ -683,6 +744,8 @@
               "name": {
                 "value": "32",
                 "synonyms": [
+                  "32nd",
+                  "32",
                   "THIRTY TWO",
                   "thirty two",
                   "Thirty Two",
@@ -697,6 +760,8 @@
               "name": {
                 "value": "33",
                 "synonyms": [
+                  "33rd",
+                  "33",
                   "THIRTY THREE",
                   "thirty three",
                   "Thirty Three",
@@ -711,6 +776,8 @@
               "name": {
                 "value": "34",
                 "synonyms": [
+                  "34th",
+                  "34",
                   "THIRTY FOUR",
                   "thirty four",
                   "Thirty Four",
@@ -725,6 +792,8 @@
               "name": {
                 "value": "35",
                 "synonyms": [
+                  "35th",
+                  "35",
                   "THIRTY FIVE",
                   "thirty five",
                   "Thirty Five",
@@ -739,6 +808,8 @@
               "name": {
                 "value": "36",
                 "synonyms": [
+                  "36th",
+                  "36",
                   "THIRTY SIX",
                   "thirty six",
                   "Thirty Six",
@@ -753,6 +824,8 @@
               "name": {
                 "value": "37",
                 "synonyms": [
+                  "37th",
+                  "37",
                   "THIRTY SEVEN",
                   "thirty seven",
                   "Thirty Seven",
@@ -767,6 +840,8 @@
               "name": {
                 "value": "38",
                 "synonyms": [
+                  "38th",
+                  "38",
                   "THIRTY EIGHT",
                   "thirty eight",
                   "Thirty Eight",
@@ -781,6 +856,8 @@
               "name": {
                 "value": "39",
                 "synonyms": [
+                  "39",
+                  "39th",
                   "THIRTY NINE",
                   "thirty nine",
                   "Thirty Nine",
@@ -795,6 +872,8 @@
               "name": {
                 "value": "40",
                 "synonyms": [
+                  "40th",
+                  "40",
                   "Fourtieth",
                   "FORTY",
                   "FOURTY",
@@ -815,6 +894,8 @@
               "name": {
                 "value": "41",
                 "synonyms": [
+                  "41st",
+                  "41",
                   "FORTY ONE",
                   "Fourty First",
                   "Fourty First",
@@ -836,6 +917,8 @@
               "name": {
                 "value": "42",
                 "synonyms": [
+                  "42nd",
+                  "42",
                   "FORTY TWO",
                   "Fourty Second",
                   "FOURTY TWO",
@@ -856,6 +939,8 @@
               "name": {
                 "value": "43",
                 "synonyms": [
+                  "43rd",
+                  "43",
                   "FORTY THREE",
                   "Fourty Third",
                   "FOURTY THREE",
@@ -876,6 +961,8 @@
               "name": {
                 "value": "44",
                 "synonyms": [
+                  "44th",
+                  "44",
                   "fourty forth",
                   "Fourty Forth",
                   "FOURTY FORTH",
@@ -902,6 +989,8 @@
               "name": {
                 "value": "45",
                 "synonyms": [
+                  "45th",
+                  "45",
                   "FORTY FIVE",
                   "Fourty Fifth",
                   "FOURTY FIVE",
@@ -922,6 +1011,8 @@
               "name": {
                 "value": "46",
                 "synonyms": [
+                  "46th",
+                  "46",
                   "FORTY SIX",
                   "Fourty Sixth",
                   "FOURTY SIX",
@@ -942,6 +1033,8 @@
               "name": {
                 "value": "47",
                 "synonyms": [
+                  "47th",
+                  "47",
                   "FORTY SEVEN",
                   "Fourty Seventh",
                   "FOURTY SEVEN",
@@ -962,6 +1055,8 @@
               "name": {
                 "value": "48",
                 "synonyms": [
+                  "48th",
+                  "48",
                   "Fourty Eighth",
                   "FORTY EIGHT",
                   "FOURTY EIGHT",
@@ -982,6 +1077,8 @@
               "name": {
                 "value": "49",
                 "synonyms": [
+                  "49th",
+                  "49",
                   "FORTY NINE",
                   "Fourty Ninth",
                   "FOURTY NINE",
@@ -1002,6 +1099,8 @@
               "name": {
                 "value": "50",
                 "synonyms": [
+                  "50th",
+                  "50",
                   "FIFTY",
                   "fifty",
                   "Fifty",
@@ -1016,6 +1115,8 @@
               "name": {
                 "value": "51",
                 "synonyms": [
+                  "51st",
+                  "51",
                   "FIFTY ONE",
                   "fifty one",
                   "Fifty One",
@@ -1030,6 +1131,8 @@
               "name": {
                 "value": "52",
                 "synonyms": [
+                  "52nd",
+                  "52",
                   "FIFTY TWO",
                   "fifty two",
                   "Fifty Two",
@@ -1044,6 +1147,8 @@
               "name": {
                 "value": "53",
                 "synonyms": [
+                  "53rd",
+                  "53",
                   "FIFTY THREE",
                   "fifty three",
                   "Fifty Three",
@@ -1058,6 +1163,8 @@
               "name": {
                 "value": "54",
                 "synonyms": [
+                  "54th",
+                  "54",
                   "FIFTY FOUR",
                   "fifty four",
                   "Fifty Four",
@@ -1072,6 +1179,8 @@
               "name": {
                 "value": "55",
                 "synonyms": [
+                  "55th",
+                  "55",
                   "FIFTY FIVE",
                   "fifty five",
                   "Fifty Five",
@@ -1086,6 +1195,8 @@
               "name": {
                 "value": "56",
                 "synonyms": [
+                  "56th",
+                  "56",
                   "FIFTY SIX",
                   "fifty six",
                   "Fifty Six",
@@ -1100,6 +1211,8 @@
               "name": {
                 "value": "57",
                 "synonyms": [
+                  "57th",
+                  "57",
                   "FIFTY SEVEN",
                   "fifty seven",
                   "Fifty Seven",
@@ -1114,6 +1227,8 @@
               "name": {
                 "value": "58",
                 "synonyms": [
+                  "58th",
+                  "58",
                   "FIFTY EIGHT",
                   "fifty eight",
                   "Fifty Eight",
@@ -1128,6 +1243,8 @@
               "name": {
                 "value": "59",
                 "synonyms": [
+                  "59th",
+                  "59",
                   "FIFTY NINE",
                   "fifty nine",
                   "Fifty Nine",
@@ -1142,6 +1259,8 @@
               "name": {
                 "value": "60",
                 "synonyms": [
+                  "60th",
+                  "60",
                   "SIXTY",
                   "sixty",
                   "Sixty",
@@ -1156,6 +1275,8 @@
               "name": {
                 "value": "61",
                 "synonyms": [
+                  "61",
+                  "61st",
                   "SIXTY ONE",
                   "sixty one",
                   "Sixty One",
@@ -1170,6 +1291,8 @@
               "name": {
                 "value": "62",
                 "synonyms": [
+                  "62nd",
+                  "62",
                   "SIXTY TWO",
                   "sixty two",
                   "Sixty Two",
@@ -1184,6 +1307,8 @@
               "name": {
                 "value": "63",
                 "synonyms": [
+                  "63",
+                  "63rd",
                   "SIXTY THREE",
                   "sixty three",
                   "Sixty Three",
@@ -1198,6 +1323,8 @@
               "name": {
                 "value": "64",
                 "synonyms": [
+                  "64th",
+                  "64",
                   "SIXTY FOUR",
                   "sixty four",
                   "Sixty Four",
@@ -1212,6 +1339,8 @@
               "name": {
                 "value": "65",
                 "synonyms": [
+                  "65th",
+                  "65",
                   "SIXTY FIVE",
                   "sixty five",
                   "Sixty Five",
@@ -1226,6 +1355,8 @@
               "name": {
                 "value": "66",
                 "synonyms": [
+                  "66th",
+                  "66",
                   "SIXTY SIX",
                   "sixty six",
                   "Sixty Six",
@@ -1240,6 +1371,8 @@
               "name": {
                 "value": "67",
                 "synonyms": [
+                  "67th",
+                  "67",
                   "SIXTY SEVEN",
                   "sixty seven",
                   "Sixty Seven",
@@ -1254,6 +1387,8 @@
               "name": {
                 "value": "68",
                 "synonyms": [
+                  "68th",
+                  "68",
                   "SIXTY EIGHT",
                   "sixty eight",
                   "Sixty Eight",
@@ -1268,6 +1403,8 @@
               "name": {
                 "value": "69",
                 "synonyms": [
+                  "69th",
+                  "69",
                   "SIXTY NINE",
                   "sixty nine",
                   "Sixty Nine",
@@ -1282,6 +1419,8 @@
               "name": {
                 "value": "70",
                 "synonyms": [
+                  "70th",
+                  "70",
                   "SEVENTY",
                   "seventy",
                   "Seventy",
@@ -1296,6 +1435,8 @@
               "name": {
                 "value": "71",
                 "synonyms": [
+                  "71st",
+                  "71",
                   "SEVENTY ONE",
                   "seventy one",
                   "Seventy One",
@@ -1310,6 +1451,8 @@
               "name": {
                 "value": "72",
                 "synonyms": [
+                  "72nd",
+                  "72",
                   "SEVENTY TWO",
                   "seventy two",
                   "Seventy Two",
@@ -1324,6 +1467,8 @@
               "name": {
                 "value": "73",
                 "synonyms": [
+                  "73rd",
+                  "73",
                   "SEVENTY THREE",
                   "seventy three",
                   "Seventy Three",
@@ -1338,6 +1483,8 @@
               "name": {
                 "value": "74",
                 "synonyms": [
+                  "74th",
+                  "74",
                   "SEVENTY FOUR",
                   "seventy four",
                   "Seventy Four",
@@ -1352,6 +1499,8 @@
               "name": {
                 "value": "75",
                 "synonyms": [
+                  "75th",
+                  "75",
                   "SEVENTY FIVE",
                   "seventy five",
                   "Seventy Five",
@@ -1366,6 +1515,8 @@
               "name": {
                 "value": "76",
                 "synonyms": [
+                  "76th",
+                  "76",
                   "SEVENTY SIX",
                   "seventy six",
                   "Seventy Six",
@@ -1380,6 +1531,8 @@
               "name": {
                 "value": "77",
                 "synonyms": [
+                  "77th",
+                  "77",
                   "SEVENTY SEVEN",
                   "seventy seven",
                   "Seventy Seven",
@@ -1394,6 +1547,8 @@
               "name": {
                 "value": "78",
                 "synonyms": [
+                  "78th",
+                  "78",
                   "SEVENTY EIGHT",
                   "seventy eight",
                   "Seventy Eight",
@@ -1408,6 +1563,7 @@
               "name": {
                 "value": "79",
                 "synonyms": [
+                  "79th",
                   "SEVENTY NINE",
                   "seventy nine",
                   "Seventy Nine",
@@ -1422,6 +1578,8 @@
               "name": {
                 "value": "80",
                 "synonyms": [
+                  "80th",
+                  "80",
                   "EIGHTY",
                   "eighty",
                   "Eighty",
@@ -1436,6 +1594,8 @@
               "name": {
                 "value": "81",
                 "synonyms": [
+                  "81",
+                  "81st",
                   "EIGHTY ONE",
                   "eighty one",
                   "Eighty One",
@@ -1450,6 +1610,8 @@
               "name": {
                 "value": "82",
                 "synonyms": [
+                  "82nd",
+                  "82",
                   "EIGHTY TWO",
                   "eighty two",
                   "Eighty Two",
@@ -1464,6 +1626,8 @@
               "name": {
                 "value": "83",
                 "synonyms": [
+                  "83rd",
+                  "83",
                   "EIGHTY THREE",
                   "eighty three",
                   "Eighty Three",
@@ -1478,6 +1642,8 @@
               "name": {
                 "value": "84",
                 "synonyms": [
+                  "84th",
+                  "84",
                   "EIGHTY FOUR",
                   "eighty four",
                   "Eighty Four",
@@ -1492,6 +1658,8 @@
               "name": {
                 "value": "85",
                 "synonyms": [
+                  "85",
+                  "85th",
                   "EIGHTY FIVE",
                   "eighty five",
                   "Eighty Five",
@@ -1506,6 +1674,8 @@
               "name": {
                 "value": "86",
                 "synonyms": [
+                  "86th",
+                  "86",
                   "EIGHTY SIX",
                   "eighty six",
                   "Eighty Six",
@@ -1520,6 +1690,8 @@
               "name": {
                 "value": "87",
                 "synonyms": [
+                  "87th",
+                  "87",
                   "EIGHTY SEVEN",
                   "eighty seven",
                   "Eighty Seven",
@@ -1534,6 +1706,8 @@
               "name": {
                 "value": "88",
                 "synonyms": [
+                  "88",
+                  "88th",
                   "EIGHTY EIGHT",
                   "eighty eight",
                   "Eighty Eight",
@@ -1548,6 +1722,8 @@
               "name": {
                 "value": "89",
                 "synonyms": [
+                  "89th",
+                  "89",
                   "EIGHTY NINE",
                   "eighty nine",
                   "Eighty Nine",
@@ -1562,6 +1738,8 @@
               "name": {
                 "value": "90",
                 "synonyms": [
+                  "90th",
+                  "90",
                   "NINETY",
                   "ninety",
                   "Ninety",
@@ -1576,6 +1754,8 @@
               "name": {
                 "value": "91",
                 "synonyms": [
+                  "91st",
+                  "91",
                   "NINETY ONE",
                   "ninety one",
                   "Ninety One",
@@ -1590,6 +1770,8 @@
               "name": {
                 "value": "92",
                 "synonyms": [
+                  "92nd",
+                  "92",
                   "NINETY TWO",
                   "ninety two",
                   "Ninety Two",
@@ -1604,6 +1786,8 @@
               "name": {
                 "value": "93",
                 "synonyms": [
+                  "93rd",
+                  "93",
                   "NINETY THREE",
                   "ninety three",
                   "Ninety Three",
@@ -1618,6 +1802,8 @@
               "name": {
                 "value": "94",
                 "synonyms": [
+                  "94th",
+                  "94",
                   "NINETY FOUR",
                   "ninety four",
                   "Ninety Four",
@@ -1632,6 +1818,8 @@
               "name": {
                 "value": "95",
                 "synonyms": [
+                  "95th",
+                  "95",
                   "NINETY FIVE",
                   "ninety five",
                   "Ninety Five",
@@ -1646,6 +1834,8 @@
               "name": {
                 "value": "96",
                 "synonyms": [
+                  "96th",
+                  "96",
                   "NINETY SIX",
                   "ninety six",
                   "Ninety Six",
@@ -1660,6 +1850,8 @@
               "name": {
                 "value": "97",
                 "synonyms": [
+                  "97th",
+                  "97",
                   "NINETY SEVEN",
                   "ninety seven",
                   "Ninety Seven",
@@ -1674,6 +1866,8 @@
               "name": {
                 "value": "98",
                 "synonyms": [
+                  "98th",
+                  "98",
                   "NINETY EIGHT",
                   "ninety eight",
                   "Ninety Eight",
@@ -1688,6 +1882,8 @@
               "name": {
                 "value": "99",
                 "synonyms": [
+                  "99th",
+                  "99",
                   "NINETY NINE",
                   "ninety nine",
                   "Ninety Nine",
@@ -1702,6 +1898,8 @@
               "name": {
                 "value": "100",
                 "synonyms": [
+                  "100th",
+                  "100",
                   "ONE HUNDRED",
                   "one hundred",
                   "One Hundred",
@@ -1821,10 +2019,10 @@
               },
               "validations": [
                 {
-                  "type": "isNotInDuration",
-                  "prompt": "Slot.Validation.171756864885.278027064893.410847606083",
-                  "start": "-PT24H",
-                  "end": "PT0H"
+                  "type": "isInDuration",
+                  "prompt": "Slot.Validation.491183863715.587377855958.381444405045",
+                  "start": "08:00",
+                  "end": "20:00"
                 }
               ]
             },
@@ -1845,7 +2043,7 @@
                 {
                   "type": "isLessThanOrEqualTo",
                   "prompt": "Slot.Validation.1502469169150.457467705085.1220930956020",
-                  "value": "5"
+                  "value": "3"
                 }
               ]
             },
@@ -1862,6 +2060,11 @@
                   "type": "isGreaterThan",
                   "prompt": "Slot.Validation.1557130119395.1169189621080.155352733939",
                   "value": "0"
+                },
+                {
+                  "type": "isLessThan",
+                  "prompt": "Slot.Validation.584888769741.1520117303722.729282310896",
+                  "value": "30"
                 }
               ]
             },
@@ -2005,7 +2208,7 @@
                 {
                   "type": "isLessThanOrEqualTo",
                   "prompt": "Slot.Validation.623573378133.1295654479569.331454872300",
-                  "value": "5"
+                  "value": "3"
                 }
               ]
             },
@@ -2022,6 +2225,11 @@
                   "type": "isGreaterThan",
                   "prompt": "Slot.Validation.623573378133.132068539957.705836348083",
                   "value": "0"
+                },
+                {
+                  "type": "isLessThan",
+                  "prompt": "Slot.Validation.1195813009870.1185962980369.1582110037648",
+                  "value": "30"
                 }
               ]
             },
@@ -2089,6 +2297,16 @@
                 {
                   "type": "hasEntityResolutionMatch",
                   "prompt": "Slot.Validation.1135887599761.1576000467717.1054982283293"
+                },
+                {
+                  "type": "isNotInSet",
+                  "prompt": "Slot.Validation.517350343007.692551086844.1501805264415",
+                  "values": [
+                    "no",
+                    "yes",
+                    "yeah",
+                    "ok"
+                  ]
                 }
               ]
             },
@@ -2113,21 +2331,7 @@
           "name": "RemoveReservation",
           "confirmationRequired": false,
           "prompts": {},
-          "slots": [
-            {
-              "name": "confirmCancellation",
-              "type": "YES_NO_SLOT",
-              "elicitationRequired": false,
-              "confirmationRequired": false,
-              "prompts": {},
-              "validations": [
-                {
-                  "type": "hasEntityResolutionMatch",
-                  "prompt": "Slot.Validation.750090469375.657171743075.353638193536"
-                }
-              ]
-            }
-          ]
+          "slots": []
         }
       ],
       "delegationStrategy": "ALWAYS"
@@ -2199,6 +2403,10 @@
       {
         "id": "Slot.Validation.1557130119395.1169189621080.155352733939",
         "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please try again with a valid value greater than zero."
+          },
           {
             "type": "PlainText",
             "value": "Choose a value greater than zero."
@@ -2282,7 +2490,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Choose a number upto five."
+            "value": "Choose a duration upto three hours."
           }
         ]
       },
@@ -2336,7 +2544,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Choose a number upto five."
+            "value": "Choose a number upto three hours."
           }
         ]
       },
@@ -2352,6 +2560,10 @@
       {
         "id": "Slot.Validation.623573378133.132068539957.705836348083",
         "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please try again with a valid value greater than zero."
+          },
           {
             "type": "PlainText",
             "value": "Choose a value greater than zero."
@@ -2669,7 +2881,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Specify your choice?"
+            "value": "Specify your choice in numeral or ordinal format."
           }
         ]
       },
@@ -2705,16 +2917,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Please enter a valid number"
-          }
-        ]
-      },
-      {
-        "id": "Slot.Validation.171756864885.278027064893.410847606083",
-        "variations": [
-          {
-            "type": "PlainText",
-            "value": "Please enter a valid time"
+            "value": "Please provide a valid number"
           }
         ]
       },
@@ -2771,8 +2974,52 @@
             "value": "yes?"
           }
         ]
+      },
+      {
+        "id": "Slot.Validation.584888769741.1520117303722.729282310896",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please try again with a valid value lesser than thirty."
+          },
+          {
+            "type": "PlainText",
+            "value": "Choose a valid value lesser than thirty."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.517350343007.692551086844.1501805264415",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please provide a valid number"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1195813009870.1185962980369.1582110037648",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please try again with a valid value lesser than thirty."
+          },
+          {
+            "type": "PlainText",
+            "value": "Choose a valid value lesser than thirty."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.491183863715.587377855958.381444405045",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please choose time a between morning eight and night eight."
+          }
+        ]
       }
     ]
   },
-  "version": "363"
+  "version": "448"
 }
